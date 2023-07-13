@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+  transition: ease-in-out 0.2s;
+}
+
+.container {
+  background-image: url("../Assets/Backgrounds/BG-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 15% 1fr 15%;
+  justify-items: center;
+  align-items: center;
+  font-family: "Rubik", sans-serif;
+}

@@ -1,0 +1,69 @@
+.container {
+  background-image: url("../Assets/Backgrounds/BG-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  justify-items: center;
+}
+
+.container h1 {
+  position: relative;
+  font-family: "Great Vibes";
+  font-weight: 100;
+  font-size: clamp(6em, 15vw, 8em);
+  margin-top: 15vh;
+}
+
+.container h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.25em;
+  width: 100%;
+  height: 0.025em;
+  background-color: #ecf9ff;
+  box-shadow: #27374d 0 0 3px;
+}
+
+.main-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: clamp(2em, 4vw, 2.5em);
+  font-family: "Rubik";
+  font-weight: 500;
+  width: 80vw;
+  max-width: 700px;
+  padding: 1vh;
+  border-radius: 25px;
+  box-shadow: #000 0px 0px 5px inset;
+  background-image: url("../Assets/Backgrounds/BG-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.container i {
+  font-size: clamp(1em, 4vw, 1.2em);
+  margin-right: 20px;
+  color: #000;
+  text-shadow: #ffffff 0 0 5px;
+}
+
+.bottom {
+  display: grid;
+  justify-items: center;
+}
