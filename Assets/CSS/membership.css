@@ -1,0 +1,55 @@
+.container h1 {
+  font-size: 8vh;
+}
+
+.container .buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 3vh;
+  font-family: "Rubik";
+  font-weight: 500;
+  width: 80vw;
+  max-width: 700px;
+  height: 7vh;
+  border-radius: 25px;
+  box-shadow: #000 0px 0px 5px inset;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+.buttons :nth-child(1) {
+  background-image: url("/Assets/Backgrounds/silver-background.jpg");
+  margin-bottom: 20px;
+  text-shadow: #99eae7 0 0 10px;
+}
+
+.buttons :nth-child(2) {
+  background-image: url("/Assets/Backgrounds/golden-background.jpg");
+  background-color: orange;
+  text-shadow: #e8f382 0 0 10px;
+}
+
+.footer a {
+  font-size: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  max-width: 600px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: #000 0px 0px 5px inset;
+  background-image: url("../Assets/Backgrounds/BG-1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
