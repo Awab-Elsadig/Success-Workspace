@@ -1,5 +1,5 @@
 .container {
-  background-image: url(/Assets/Backgrounds/beautiful-skyscape-during-daytime.jpg);
+  background-image: url(../Assets/Backgrounds/beautiful-skyscape-during-daytime.jpg);
 }
 
 .three-rooms {
@@ -34,22 +34,22 @@
 }
 
 .container .room.room-1 {
-  background-image: url(/Assets/Backgrounds/concrete-wall-scratched-material-background-texture-concept.jpg);
+  background-image: url(../Assets/Backgrounds/concrete-wall-scratched-material-background-texture-concept.jpg);
 }
 .container .room.room-2 {
-  background-image: url(/Assets/Backgrounds/BG-3.jpeg);
+  background-image: url(../Assets/Backgrounds/BG-3.jpeg);
 }
 .container .room.room-3 {
-  background-image: url(/Assets/Backgrounds/BG-2.jpeg);
+  background-image: url(../Assets/Backgrounds/BG-2.jpeg);
 }
 .container.room-1 {
-  background-image: url(/Assets/Backgrounds/sky-astrology-cosmos-galaxy-starry.jpg);
+  background-image: url(../Assets/Backgrounds/sky-astrology-cosmos-galaxy-starry.jpg);
 }
 .container.room-2 {
-  background-image: url(/Assets/Backgrounds/BG-3.jpeg);
+  background-image: url(../Assets/Backgrounds/BG-3.jpeg);
 }
 .container.room-3 {
-  background-image: url(/Assets/Backgrounds/BG-4.jpeg);
+  background-image: url(../Assets/Backgrounds/BG-4.jpeg);
 }
 
 .top-button {
@@ -59,7 +59,7 @@
   font-size: clamp(3vw, 3rem, 10vw);
   font-family: "Francois One";
   padding: 1vh 2vw;
-  background-image: url(/Assets/Backgrounds/BG-2.jpeg);
+  background-image: url(../Assets/Backgrounds/BG-2.jpeg);
   border-radius: 2vw;
 }
 

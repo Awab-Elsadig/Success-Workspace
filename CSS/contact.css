@@ -27,12 +27,12 @@
 }
 
 .buttons :nth-child(1) {
-  background-image: url("/Assets/Backgrounds/silver-background.jpg");
+  background-image: url("../Assets/Backgrounds/silver-background.jpg");
   margin-bottom: 20px;
 }
 
 .buttons :nth-child(2) {
-  background-image: url("/Assets/Backgrounds/golden-background.jpg");
+  background-image: url("../Assets/Backgrounds/golden-background.jpg");
   background-color: orange;
 }
 
