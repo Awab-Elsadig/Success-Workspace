@@ -19,11 +19,16 @@
    }
 
    .button {
-      color: var(--color-light);
-      background-color: var(--color-blue);
+      color: var(--color-black);
+      background-color: #99dbf5;
+      .button__text {
+         text-shadow: none;
+      }
 
       .button__icon {
-         background-color: var(--color-dark-blue);
+         background-color: var(--color-blue);
+         box-shadow: inset #444 0 0 5px;
+         color: var(--color-white);
          .fa-star {
             color: gold;
          }

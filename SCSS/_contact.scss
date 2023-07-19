@@ -25,13 +25,13 @@
       flex-direction: column;
       width: 70vw;
       padding: 2vh;
-      background-color: var(--color-light-mint);
-      color: var(--color-dark-mint);
-      border-radius: 1vh;
       position: relative;
+      color: var(--color-dark-mint);
+      background-color: #088395;
       border: 10px var(--color-light) solid;
       border-right-color: var(--color-dark-mint);
       border-bottom-color: var(--color-dark-mint);
+      border-radius: 1vh;
 
       h3 {
          font-size: 2vh;
@@ -65,7 +65,7 @@
          bottom: 2vh;
          transform: translate(-50%);
 
-         background-color: var(--color-mint);
+         background-color: var(--color-light);
          font-family: inherit;
 
          color: var(--color-dark-mint);
