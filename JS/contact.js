@@ -1,5 +1,5 @@
 document.getElementById("telegramForm").addEventListener("submit", function (event) {
-   // event.preventDefault();
+   event.preventDefault();
 
    // Get form data
    const formData = new FormData(event.target);
@@ -45,4 +45,8 @@ ${message}`;
       .catch((error) => {
          alert("An error occurred while sending the message. Please try again later.");
       });
+
+   document.querySelector("form .name__input").value = "";
+   document.querySelector("form .phone__input").value = "";
+   document.querySelector("form .message__input").value = "";
 });

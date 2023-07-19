@@ -56,6 +56,13 @@
       text-shadow: #444 0 0 10px, #444 0 0 10px;
       font-size: 3vh;
    }
+
+   &.back__button {
+      background-color: var(--color-teal);
+      .button__icon {
+         background-color: var(--color-dark-teal);
+      }
+   }
 }
 
 // ================ Medium Devices =============================
