@@ -5,6 +5,7 @@
 @use "./membership";
 @use "./weekly_membership";
 @use "./monthly_membership";
+@use "./contact";
 
 .container {
    @include mixins.center-flex;

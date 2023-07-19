@@ -1,0 +1,9 @@
+@use "./theIncludes/mixins";
+@use "./theIncludes/variables";
+
+.contact__container {
+   background-image: url("../Assets/Backgrounds/");
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-size: 5rem;
+}
