@@ -34,13 +34,12 @@
 }
 
 .button {
-   @include mixins.rounded-rectangle(70vw, 10vh, 2vh);
+   @include mixins.rounded-rectangle(70vw, 6vh, 2vh);
    @include mixins.center-flex;
    position: relative;
    box-shadow: inset #444 0 0 1vh;
 
    .button__icon {
-      @include mixins.rounded-rectangle(7vh, 7vh, 2vh);
       @include mixins.center-flex;
       position: absolute;
       top: 50%;
