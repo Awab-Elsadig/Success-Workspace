@@ -7,33 +7,68 @@
    background-size: cover;
    font-size: 13rem;
 
+   .button {
+      background-color: var(--color-teal);
+      .button__icon {
+         background-color: var(--color-dark-teal);
+         box-shadow: #444 0 0 2px;
+         font-size: 3vh;
+         top: 1.5vh;
+         transform: none;
+      }
+
+      .button__text {
+         color: var(--color-light);
+         text-shadow: #444 0 0 10px, #444 0 0 10px;
+      }
+   }
+
    form {
-      @include mixins.center-flex;
+      display: flex;
       flex-direction: column;
       width: 70vw;
+      min-height: 60vh;
       padding: 2rem;
-      background-color: lightblue;
+      background-color: var(--color-light-mint);
+      color: var(--color-dark-mint);
       border-radius: 1vh;
+      position: relative;
+      border: 10px var(--color-light) solid;
+      border-right-color: #6d6d9b;
+      border-bottom-color: #6d6d9b;
 
       h3 {
          font-size: 1rem;
          align-self: flex-start;
-         margin: 0 0 0.5rem 1rem;
+         margin: 0 0 0.5rem 0.5rem;
+      }
+
+      %field {
+         width: 100%;
+         height: 2rem;
+         padding: 1rem;
+         border-radius: 1vh;
       }
 
       .name__input,
-      .phone__input,
-      .submit__button {
-         width: 100%;
-         height: 2rem;
+      .phone__input {
+         @extend %field;
          margin-bottom: 2rem;
-         padding: 1rem;
-         border-radius: 1vh;
       }
       .message__input {
          width: 100%;
          height: 6rem;
          border-radius: 1vh;
+         font-family: inherit;
+      }
+      .submit__button {
+         position: absolute;
+         left: 50%;
+         bottom: 2rem;
+         transform: translate(-50%);
+
+         color: var(--color-light);
+         background-color: var(--color-mint);
       }
    }
 }

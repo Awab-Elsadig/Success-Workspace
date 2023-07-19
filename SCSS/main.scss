@@ -25,7 +25,7 @@
 
 .middle {
    @include mixins.center-flex;
-   flex: 2;
+   flex: 5;
    flex-direction: column;
    width: 100%;
    height: 100%;
