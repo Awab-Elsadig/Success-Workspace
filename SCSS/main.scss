@@ -21,7 +21,6 @@
    @include mixins.center-flex;
    flex-grow: 1;
    flex-shrink: 0;
-   padding: 5vh 0;
 }
 
 .middle {
@@ -80,8 +79,7 @@
    }
 
    .middle {
-      flex: none;
-      min-height: 80vh;
+      padding: 5vh 0;
    }
 
    .button {

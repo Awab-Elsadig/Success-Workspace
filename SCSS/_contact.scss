@@ -110,9 +110,6 @@
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
    .contact__container {
-      .middle {
-         // min-height: 100vh;
-      }
       form {
          h3 {
             font-size: 3vw;
