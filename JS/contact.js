@@ -18,6 +18,7 @@ document.getElementById("telegramForm").addEventListener("submit", function (eve
    const text = `Message:
 Name: ${name}
 Phone Number: ${phone}
+
 Message:
 ${message}`;
 
