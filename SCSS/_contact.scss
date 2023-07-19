@@ -67,9 +67,8 @@
          bottom: 1rem;
          transform: translate(-50%);
 
-         color: var(--color-white);
          background-color: var(--color-mint);
-         text-shadow: #444 0 0 5px, #444 0 0 5px;
+         font-family: inherit;
 
          width: calc(100% - 4rem);
          padding: 0.5rem;
