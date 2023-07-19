@@ -34,7 +34,7 @@
 }
 
 .button {
-   @include mixins.rounded-rectangle(70vw, 6vh, 2vh);
+   @include mixins.rounded-rectangle(70vw, 8vh, 2vh);
    @include mixins.center-flex;
    position: relative;
    box-shadow: inset #444 0 0 1vh;
@@ -43,7 +43,7 @@
       @include mixins.center-flex;
       position: absolute;
       top: 50%;
-      left: 1.5vh;
+      left: 2vh;
       transform: translate(0, -50%);
       font-size: 3vh;
    }
