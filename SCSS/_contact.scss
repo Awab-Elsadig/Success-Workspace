@@ -1,11 +1,11 @@
 @use "./theIncludes/mixins";
 @use "./theIncludes/variables";
 
+// ================ All Devices =============================
 .contact__container {
    background-image: url("../Assets/Backgrounds/mint.jpg");
    background-repeat: no-repeat;
    background-size: cover;
-   font-size: 13rem;
 
    .button {
       background-color: var(--color-teal);
@@ -75,4 +75,92 @@
          border-radius: 1vh;
       }
    }
+}
+
+// ================ Medium Devices =============================
+@media (min-width: 768px) and (max-width: 991px) {
+   .contact__container {
+      background-image: url("../Assets/Backgrounds/mint.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .button {
+         background-color: var(--color-teal);
+         .button__icon {
+            background-color: var(--color-dark-teal);
+            box-shadow: #444 0 0 2px;
+            font-size: 3vh;
+            top: 1.5vh;
+            transform: none;
+         }
+
+         .button__text {
+            color: var(--color-light);
+            text-shadow: #444 0 0 10px, #444 0 0 10px;
+         }
+      }
+
+      form {
+         display: flex;
+         flex-direction: column;
+         width: 70vw;
+         min-height: 60vh;
+         padding: 2rem;
+         background-color: var(--color-light-mint);
+         color: var(--color-dark-mint);
+         border-radius: 1vh;
+         position: relative;
+         border: 10px var(--color-light) solid;
+         border-right-color: #6d6d9b;
+         border-bottom-color: #6d6d9b;
+
+         h3 {
+            font-size: 1rem;
+            align-self: flex-start;
+            margin: 0 0 0.5rem 0.5rem;
+         }
+
+         %field {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 1vh;
+         }
+
+         .name__input,
+         .phone__input {
+            @extend %field;
+            height: 3rem;
+            margin-bottom: 2rem;
+         }
+         .message__input {
+            @extend %field;
+            height: 8rem;
+            font-family: inherit;
+            margin-bottom: 6rem;
+         }
+         .submit__button {
+            position: absolute;
+            left: 50%;
+            bottom: 1rem;
+            transform: translate(-50%);
+
+            background-color: var(--color-mint);
+            font-family: inherit;
+
+            width: calc(100% - 4rem);
+            padding: 0.5rem;
+            border-radius: 1vh;
+         }
+      }
+   }
+}
+// ================ Large Devices =============================
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+// ================ Desktop Devices =============================
+@media (min-width: 1200px) {
+}
+
+// ================ Landscape Orientation ========================
+@media (max-height: 767px) and (orientation: landscape) {
 }

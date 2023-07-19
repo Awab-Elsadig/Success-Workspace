@@ -1,6 +1,7 @@
 @use "./theIncludes/mixins";
 @use "./theIncludes/variables";
 
+
 .membership__container {
    @include mixins.center-flex;
    background-image: url(../Assets/Backgrounds/BG-2.jpeg);
