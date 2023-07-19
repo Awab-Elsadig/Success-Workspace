@@ -1,5 +1,5 @@
 document.getElementById("telegramForm").addEventListener("submit", function (event) {
-   event.preventDefault();
+   // event.preventDefault();
 
    // Get form data
    const formData = new FormData(event.target);
