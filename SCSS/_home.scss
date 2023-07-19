@@ -48,4 +48,9 @@
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
+   .home__container {
+      .logo {
+         font-size: 10vw;
+      }
+   }
 }

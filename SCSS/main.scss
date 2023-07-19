@@ -73,4 +73,25 @@
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
+   .container {
+      height: max-content;
+   }
+
+   .middle {
+      flex: none;
+      height: 80vh;
+   }
+
+   .button {
+      height: 10vw;
+      .button__icon {
+         @include mixins.rounded-rectangle(7vw, 7vw, 1.5vw);
+         left: 1.5vw;
+         font-size: 3vw;
+      }
+      .button__text {
+         right: 3vw;
+         font-size: 3vw;
+      }
+   }
 }
