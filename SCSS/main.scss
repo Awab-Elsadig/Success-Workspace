@@ -19,7 +19,9 @@
 
 .top {
    @include mixins.center-flex;
-   flex: 1;
+   flex-grow: 1;
+   flex-shrink: 0;
+   padding: 5vh 0;
 }
 
 .middle {
@@ -79,7 +81,7 @@
 
    .middle {
       flex: none;
-      height: 80vh;
+      min-height: 80vh;
    }
 
    .button {
