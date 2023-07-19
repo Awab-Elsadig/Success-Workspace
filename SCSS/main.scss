@@ -33,6 +33,8 @@
    flex: 1;
 }
 
+// ****** Button **********
+
 .button {
    @include mixins.rounded-rectangle(70vw, 8vh, 2vh);
    @include mixins.center-flex;
@@ -52,14 +54,63 @@
       top: 50%;
       right: 3vh;
       transform: translate(0, -50%);
-      text-shadow: #444 0 0 10px, #444 0 0 10px;
       font-size: 3vh;
    }
+}
 
-   &.back__button {
-      background-color: var(--color-teal);
-      .button__icon {
-         background-color: var(--color-dark-teal);
+// ****** Form **********
+form {
+   display: flex;
+   flex-direction: column;
+   width: 70vw;
+   padding: 2vh;
+   position: relative;
+   border-radius: 1vh;
+   min-height: 60vh;
+   box-shadow: #000 3px 3px 5px;
+
+   h3 {
+      font-size: 2.2vh;
+      align-self: flex-start;
+      margin: 0 0 0.5vh 1vh;
+   }
+
+   %field {
+      width: 100%;
+      padding: 2vh;
+      border-radius: 1vh;
+   }
+
+   .name__input,
+   .phone__input {
+      @extend %field;
+      height: 8vh;
+      margin-bottom: 2vh;
+      font-size: 1.8vh;
+      box-shadow: #000 3px 3px 2px;
+   }
+   .message__input {
+      @extend %field;
+      height: 15vh;
+      font-family: inherit;
+      margin-bottom: 10vh;
+      font-size: 1.8vh;
+   }
+   .submit__button {
+      position: absolute;
+      left: 50%;
+      bottom: 2vh;
+      transform: translate(-50%);
+      height: 6vh;
+      width: calc(100% - 4vh);
+      border-radius: 1vh;
+      box-shadow: #000 0px 0px 3px inset;
+
+      cursor: pointer;
+      font: {
+         family: inherit;
+         size: 2.5vh;
+         weight: 600;
       }
    }
 }
@@ -68,6 +119,16 @@
 @media (min-width: 768px) {
    .button {
       width: 500px;
+   }
+   form {
+      width: 500px;
+      .name__input,
+      .phone__input {
+         font-size: 1.6vh;
+      }
+      .message__input {
+         font-size: 1.8vh;
+      }
    }
 }
 // ================ Large Devices =============================
@@ -84,6 +145,7 @@
    }
 
    .button {
+      border-radius: 2vw;
       height: 10vw;
       .button__icon {
          left: 1.5vw;
@@ -92,6 +154,47 @@
       .button__text {
          right: 3vw;
          font-size: 3vw;
+      }
+   }
+   form {
+      min-height: 100vh;
+      border-radius: 1vw;
+      padding: 2vw;
+      h3 {
+         font-size: 3vw;
+         margin: 0 0 0.5vw 1vw;
+      }
+
+      %field {
+         padding: 2vw;
+         border-radius: 1vw;
+      }
+      .name__input,
+      .phone__input {
+         height: 8vw;
+         margin-bottom: 2vw;
+         font-size: 1.6vw;
+      }
+      .message__input {
+         @extend %field;
+         height: 15vw;
+         margin-bottom: 10vw;
+         font-size: 1.8vw;
+      }
+      .submit__button {
+         position: absolute;
+         left: 50%;
+         bottom: 2vw;
+         transform: translate(-50%);
+
+         font-family: inherit;
+
+         font-size: 2.5vw;
+         font-weight: 600;
+         height: 6vw;
+         width: calc(100% - 4vw);
+         border-radius: 1vw;
+         cursor: pointer;
       }
    }
 }
