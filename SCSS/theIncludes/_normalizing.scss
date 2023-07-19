@@ -1,0 +1,21 @@
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+a {
+   color: #fff;
+}

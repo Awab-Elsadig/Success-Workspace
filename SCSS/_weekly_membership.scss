@@ -1,0 +1,136 @@
+@use "./theIncludes/mixins";
+@use "./theIncludes/variables";
+
+// ================ All Devices =============================
+.weekly__membership__container {
+   background-image: url(../Assets/Backgrounds/light-blue.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   .top {
+      .button {
+         background-color: var(--color-teal);
+         .button__text {
+            text-shadow: #444 0 0 5px;
+         }
+         .button__icon {
+            background-color: var(--color-dark-teal);
+         }
+      }
+   }
+   .middle {
+      @include mixins.center-flex;
+      flex-direction: column;
+      flex: 4;
+   }
+   form {
+      display: flex;
+      padding: 20px;
+      direction: rtl;
+      flex-direction: column;
+      width: 70vw;
+      height: 80%;
+      border-radius: 20px;
+      color: var(--color-light);
+      background-color: var(--color-mint);
+      text-shadow: #444 0 0 10px, #444 0 0 10px;
+      box-shadow: #444 0 0 10px;
+      position: relative;
+
+      .name__title,
+      .phone__title {
+         margin: 1rem 0 1rem;
+      }
+
+      input {
+         width: 100%;
+         height: 40px;
+         margin-bottom: 10px;
+         padding: 10px;
+         border-radius: 5px;
+         font-family: inherit;
+         background-color: var(--color-light-mint);
+         box-shadow: #444 0 0 5px inset;
+      }
+
+      .send__button {
+         position: absolute;
+         bottom: 40px;
+         left: 50%;
+         transform: translate(-50%);
+         width: 80%;
+         height: 60px;
+         border-radius: 10px;
+         font: {
+            size: 1.5rem;
+            family: inherit;
+            weight: 600;
+         }
+      }
+   }
+}
+
+// ================ Medium Devices =============================
+@media (min-width: 768px) and (max-width: 991px) {
+   .weekly__membership__container {
+      form {
+         input {
+            height: 80px;
+            font-size: 1.5rem;
+         }
+
+         .send__button {
+            height: 60px;
+         }
+      }
+   }
+}
+
+// ================ Large Devices =============================
+@media (min-width: 992px) and (max-width: 1199px) {
+   .weekly__membership__container {
+      form {
+         width: 600px;
+
+         input {
+            height: 80px;
+            font-size: 1.5rem;
+         }
+
+         .send__button {
+            height: 60px;
+         }
+      }
+   }
+}
+
+// ================ Desktop Devices =============================
+@media (min-width: 1200px) {
+   .weekly__membership__container {
+      form {
+         width: 600px;
+
+         input {
+            height: 80px;
+            font-size: 1.5rem;
+         }
+
+         .send__button {
+            height: 60px;
+            transition: 0.3s ease;
+            &:hover {
+               transform: translate(-50%) scale(1.1);
+               border: #444 solid 2px;
+               cursor: pointer;
+            }
+         }
+      }
+   }
+}
+
+// ================ Landscape Orientation ========================
+@media (max-height: 767px) and (orientation: landscape) {
+   .weekly__membership__container .middle {
+      flex: none;
+      height: 600px;
+   }
+}

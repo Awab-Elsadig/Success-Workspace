@@ -1,0 +1,190 @@
+@use "./theIncludes/mixins";
+@use "./theIncludes/variables";
+@use "./theIncludes/normalizing";
+@use "./home";
+@use "./membership";
+@use "./weekly_membership";
+@use "./monthly_membership";
+
+.container {
+   @include mixins.center-flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+   padding: 3vh;
+   font-family: "Rubik", sans-serif;
+}
+
+.top {
+   @include mixins.center-flex;
+   flex: 1;
+   width: 100%;
+   height: 100%;
+}
+
+.middle {
+   @include mixins.center-flex;
+   flex: 2;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
+
+.bottom {
+   @include mixins.center-flex;
+   flex: 1;
+   width: 100%;
+   height: 100%;
+}
+
+.middle .button {
+   margin-bottom: 2vh;
+}
+
+.button {
+   @include mixins.center-flex;
+   position: relative;
+   box-shadow: inset #444 0 0 5px;
+
+   .button__icon {
+      @include mixins.center-flex;
+      position: absolute;
+   }
+   .button__text {
+      position: absolute;
+   }
+}
+
+// ================ Small Devices =============================
+@media (max-width: 767px) {
+   .button {
+      @include mixins.rounded-rectangle(70vw, 10vh, 2vh);
+      position: relative;
+      box-shadow: inset #444 0 0 5px;
+
+      .button__icon {
+         @include mixins.rounded-rectangle(7vh, 7vh, 2vh);
+         position: absolute;
+         top: 50%;
+         top: 1.5vh;
+         left: 1vh;
+         font-size: 3vh;
+      }
+      .button__text {
+         position: absolute;
+         top: 50%;
+         right: 3vw;
+         transform: translate(0, -50%);
+         font-size: 1.5rem;
+      }
+   }
+}
+// ================ Medium Devices =============================
+@media (min-width: 768px) and (max-width: 991px) {
+   .button {
+      @include mixins.rounded-rectangle(70vw, 10vh, 2vh);
+      position: relative;
+      box-shadow: inset #444 0 0 5px;
+
+      .button__icon {
+         @include mixins.rounded-rectangle(7vh, 7vh, 2vh);
+         position: absolute;
+         top: 50%;
+         top: 1.5vh;
+         left: 1vh;
+         font-size: 3vh;
+      }
+      .button__text {
+         position: absolute;
+         top: 50%;
+         right: 3vw;
+         transform: translate(0, -50%);
+         font-size: 2.5rem;
+      }
+   }
+}
+// ================ Large Devices =============================
+@media (min-width: 992px) and (max-width: 1199px) {
+   .button {
+      @include mixins.rounded-rectangle(600px, 10vh, 2vh);
+      position: relative;
+      box-shadow: inset #444 0 0 5px;
+
+      .button__icon {
+         @include mixins.rounded-rectangle(7vh, 7vh, 2vh);
+         position: absolute;
+         top: 50%;
+         top: 1.5vh;
+         left: 1vh;
+         font-size: 3vh;
+      }
+      .button__text {
+         position: absolute;
+         top: 50%;
+         right: 3vw;
+         transform: translate(0, -50%);
+         font-size: 2.5rem;
+      }
+   }
+}
+// ================ Desktop Devices =============================
+@media (min-width: 1200px) {
+   .button {
+      @include mixins.rounded-rectangle(600px, 10vh, 2vh);
+      position: relative;
+      box-shadow: inset #444 0 0 5px;
+
+      .button__icon {
+         @include mixins.rounded-rectangle(7vh, 7vh, 2vh);
+         position: absolute;
+         top: 50%;
+         top: 1.5vh;
+         left: 1vh;
+         font-size: 3vh;
+      }
+      .button__text {
+         position: absolute;
+         top: 50%;
+         right: 3vw;
+         transform: translate(0, -50%);
+         font-size: 2.5rem;
+      }
+   }
+}
+
+// ================ Landscape Orientation ========================
+@media (max-height: 767px) and (orientation: landscape) {
+   .container {
+      min-height: 100%;
+      height: fit-content;
+   }
+   .top,
+   .middle,
+   .bottom {
+      flex: none;
+      padding: 2vh;
+   }
+   .middle {
+      height: 300px;
+   }
+   .button {
+      @include mixins.rounded-rectangle(400px, 80px, 2vh);
+      position: relative;
+      box-shadow: inset #444 0 0 5px;
+
+      .button__icon {
+         @include mixins.rounded-rectangle(60px, 60px, 2vh);
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         font-size: 30px;
+      }
+      .button__text {
+         position: absolute;
+         top: 50%;
+         right: 3vw;
+         transform: translate(0, -50%);
+         font-size: 1.5rem;
+      }
+   }
+}

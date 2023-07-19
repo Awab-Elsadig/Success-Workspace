@@ -1,0 +1,11 @@
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rounded-rectangle($wid, $hei, $bor) {
+  width: $wid;
+  height: $hei;
+  border-radius: $bor;
+}

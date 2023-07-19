@@ -1,0 +1,116 @@
+@use "./theIncludes/mixins";
+@use "./theIncludes/variables";
+
+.membership__container {
+   @include mixins.center-flex;
+   background-image: url(../Assets/Backgrounds/BG-2.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   flex-direction: column;
+   .middle {
+      flex: 4;
+   }
+
+   .button {
+      .button__icon {
+         background-color: var(--color-dark-teal);
+         box-shadow: #444 0 0 2px;
+         font-size: 3vh;
+         top: 1.5vh;
+         transform: none;
+      }
+
+      .button__text {
+         color: var(--color-light);
+         text-shadow: #444 0 0 10px, #444 0 0 10px;
+      }
+
+      &.back__button {
+         background-color: var(--color-teal);
+      }
+
+      &.weekly__button,
+      &.monthly__button {
+         height: 15vh;
+         .button__text {
+            right: 0;
+            top: 0;
+            transform: none;
+            height: 100%;
+            width: 70%;
+            font-size: clamp(0.9rem, 4vw, 2rem);
+            .type {
+               position: absolute;
+               right: 0;
+               top: 0;
+               margin: 2vh;
+               text-align: right;
+            }
+            .price {
+               position: absolute;
+               right: 0;
+               bottom: 0;
+               width: max-content;
+               font-size: clamp(1.5rem, 5vw, 2rem);
+               margin: 0 3vh 3vh 0;
+            }
+         }
+      }
+
+      &.weekly__button {
+         background-color: var(--color-mint);
+      }
+      &.monthly__button {
+         background-color: var(--color-purple);
+      }
+   }
+
+   .bottom {
+      flex: 0;
+   }
+}
+
+// ================ Landscape Orientation ========================
+@media (max-height: 767px) and (orientation: landscape) {
+   .membership__container {
+      .middle {
+         height: 400px;
+      }
+      .button {
+         height: 80px;
+         .button__text {
+            .type {
+               margin: 10px;
+               font-size: 1.5rem;
+            }
+            .price {
+               margin: 20px;
+               font-size: 2rem;
+            }
+         }
+      }
+      .button {
+         .button__icon {
+            @include mixins.rounded-rectangle(60px, 60px, 2vh);
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+         }
+
+         &.weekly__button,
+         &.monthly__button {
+            height: 120px;
+            .button__text {
+               .type {
+                  font-size: 1.5rem;
+                  margin: 20px;
+               }
+               .price {
+                  font-size: 2rem;
+                  margin: 20px;
+               }
+            }
+         }
+      }
+   }
+}
