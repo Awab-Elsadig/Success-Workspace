@@ -12,9 +12,6 @@
       .button__icon {
          background-color: var(--color-dark-teal);
          box-shadow: #444 0 0 2px;
-         font-size: 3vh;
-         top: 1.5vh;
-         transform: none;
       }
 
       .button__text {
@@ -28,24 +25,24 @@
       flex-direction: column;
       width: 70vw;
       min-height: 60vh;
-      padding: 2rem;
+      padding: 2vh;
       background-color: var(--color-light-mint);
       color: var(--color-dark-mint);
       border-radius: 1vh;
       position: relative;
       border: 10px var(--color-light) solid;
-      border-right-color: #6d6d9b;
-      border-bottom-color: #6d6d9b;
+      border-right-color: var(--color-dark-mint);
+      border-bottom-color: var(--color-dark-mint);
 
       h3 {
-         font-size: 1rem;
+         font-size: 2vh;
          align-self: flex-start;
-         margin: 0 0 0.5rem 0.5rem;
+         margin: 0 0 0.5vh 1vh;
       }
 
       %field {
          width: 100%;
-         padding: 0.5rem;
+         padding: 2vh;
          border-radius: 1vh;
       }
 
@@ -54,12 +51,14 @@
          @extend %field;
          height: 3rem;
          margin-bottom: 2rem;
+         font-size: 1.4vh;
       }
       .message__input {
          @extend %field;
          height: 8rem;
          font-family: inherit;
          margin-bottom: 6rem;
+         font-size: 1.5vh;
       }
       .submit__button {
          position: absolute;
@@ -70,73 +69,28 @@
          background-color: var(--color-mint);
          font-family: inherit;
 
+         color: var(--color-dark-mint);
+         font-size: 2.5vh;
+         font-weight: 600;
+         height: 8vh;
          width: calc(100% - 4rem);
-         padding: 0.5rem;
          border-radius: 1vh;
+         cursor: pointer;
       }
    }
 }
 
 // ================ Medium Devices =============================
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) {
    .contact__container {
-      background-image: url("../Assets/Backgrounds/mint.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      .button {
-         background-color: var(--color-teal);
-         .button__icon {
-            background-color: var(--color-dark-teal);
-            box-shadow: #444 0 0 2px;
-            font-size: 3vh;
-            top: 1.5vh;
-            transform: none;
-         }
-
-         .button__text {
-            color: var(--color-light);
-            text-shadow: #444 0 0 10px, #444 0 0 10px;
-         }
-      }
-
       form {
-         display: flex;
-         flex-direction: column;
-         width: 70vw;
-         min-height: 60vh;
-         padding: 2rem;
-         background-color: var(--color-light-mint);
-         color: var(--color-dark-mint);
-         border-radius: 1vh;
-         position: relative;
-         border: 10px var(--color-light) solid;
-         border-right-color: #6d6d9b;
-         border-bottom-color: #6d6d9b;
-
-         h3 {
-            font-size: 1rem;
-            align-self: flex-start;
-            margin: 0 0 0.5rem 0.5rem;
-         }
-
-         %field {
-            width: 100%;
-            padding: 0.5rem;
-            border-radius: 1vh;
-         }
-
+         width: 500px;
          .name__input,
          .phone__input {
-            @extend %field;
-            height: 3rem;
-            margin-bottom: 2rem;
+            font-size: 1.6vh;
          }
          .message__input {
-            @extend %field;
-            height: 8rem;
-            font-family: inherit;
-            margin-bottom: 6rem;
+            font-size: 1.8vh;
          }
          .submit__button {
             position: absolute;
@@ -150,6 +104,7 @@
             width: calc(100% - 4rem);
             padding: 0.5rem;
             border-radius: 1vh;
+            cursor: pointer;
          }
       }
    }

@@ -34,27 +34,27 @@
 }
 
 .button {
-   @include mixins.rounded-rectangle(70vw, 5rem, 1.5vh);
+   @include mixins.rounded-rectangle(70vw, 10vh, 1.5vh);
    @include mixins.center-flex;
    position: relative;
-   box-shadow: inset #444 0 0 0.75rem;
-   
+   box-shadow: inset #444 0 0 1vh;
+
    .button__icon {
-      @include mixins.rounded-rectangle(3.5rem, 3.5rem, 1.5vh);
+      @include mixins.rounded-rectangle(7vh, 7vh, 1.5vh);
       @include mixins.center-flex;
       position: absolute;
       top: 50%;
-      left: 0.75rem;
+      left: 1.5vh;
       transform: translate(0, -50%);
-      font-size: 1.75rem;
+      font-size: 3vh;
    }
    .button__text {
       position: absolute;
       top: 50%;
-      right: 3vw;
+      right: 3vh;
       transform: translate(0, -50%);
       text-shadow: #444 0 0 10px, #444 0 0 10px;
-      font-size: 1.5rem;
+      font-size: 3vh;
    }
 }
 
@@ -66,26 +66,6 @@
 }
 // ================ Large Devices =============================
 @media (min-width: 992px) and (max-width: 1199px) {
-   .button {
-      height: 10vh;
-
-      .button__icon {
-         @include mixins.rounded-rectangle(7vh, 7vh, 1.5vh);
-         @include mixins.center-flex;
-         position: absolute;
-         top: 50%;
-         left: 1.5vh;
-         transform: translate(0, -50%);
-         font-size: 3vh;
-      }
-      .button__text {
-         position: absolute;
-         top: 50%;
-         right: 3vw;
-         transform: translate(0, -50%);
-         font-size: 3vh;
-      }
-   }
 }
 // ================ Desktop Devices =============================
 @media (min-width: 1200px) {
