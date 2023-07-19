@@ -59,9 +59,9 @@
       }
       .message__input {
          @extend %field;
-         height: 8rem;
+         height: 15vh;
          font-family: inherit;
-         margin-bottom: 6rem;
+         margin-bottom: 10vh;
          font-size: 1.5vh;
       }
       .submit__button {
@@ -76,7 +76,7 @@
          color: var(--color-dark-mint);
          font-size: 2.5vh;
          font-weight: 600;
-         height: 8vh;
+         height: 6vh;
          width: calc(100% - 4vh);
          border-radius: 1vh;
          cursor: pointer;
@@ -111,6 +111,8 @@
 @media (max-height: 767px) and (orientation: landscape) {
    .contact__container {
       form {
+         padding: 2vw;
+         width: 400px;
          h3 {
             font-size: 3vw;
             margin: 0 0 0.5vw 1vw;
@@ -118,21 +120,20 @@
 
          .name__input,
          .phone__input {
-            height: 10vw;
-            margin-bottom: 2vh;
-            font-size: 1.4vh;
+            height:5vw;
+            margin-bottom: 2vw;
+            font-size: 1.4vw;
          }
          .message__input {
             @extend %field;
-            height: 8rem;
-            font-family: inherit;
-            margin-bottom: 6rem;
-            font-size: 1.5vh;
+            height: 15vw;
+            margin-bottom: 10vw;
+            font-size: 1.5vw;
          }
          .submit__button {
             position: absolute;
             left: 50%;
-            bottom: 2vh;
+            bottom: 2vw;
             transform: translate(-50%);
 
             background-color: var(--color-mint);
@@ -141,9 +142,9 @@
             color: var(--color-dark-mint);
             font-size: 2.5vh;
             font-weight: 600;
-            height: 8vh;
-            width: calc(100% - 4vh);
-            border-radius: 1vh;
+            height: 6vw;
+            width: calc(100% - 4vw);
+            border-radius: 1vw;
             cursor: pointer;
          }
       }

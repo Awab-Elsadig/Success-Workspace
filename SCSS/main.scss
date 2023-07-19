@@ -19,14 +19,13 @@
 
 .top {
    @include mixins.center-flex;
-   flex-grow: 1;
-   flex-shrink: 0;
 }
 
 .middle {
    @include mixins.center-flex;
    flex: 3;
    flex-direction: column;
+   padding: 5vh 0;
 }
 
 .bottom {
@@ -78,12 +77,9 @@
       height: max-content;
    }
 
-   .middle {
-      padding: 5vh 0;
-   }
-
    .button {
       height: 10vw;
+      width: 400px;
       .button__icon {
          @include mixins.rounded-rectangle(7vw, 7vw, 1.5vw);
          left: 1.5vw;
