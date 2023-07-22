@@ -20,14 +20,13 @@
 }
 
 .top {
-   display: flex;
-   justify-content: center;
+   @include mixins.center-flex;
    padding: 5vh 0;
    width: 100%;
 }
 
 .middle {
-   display: flex;
+   @include mixins.center-flex;
    flex: 1;
    align-items: center;
    flex-direction: column;
@@ -36,8 +35,7 @@
 }
 
 .bottom {
-   display: flex;
-   align-items: center;
+   @include mixins.center-flex;
    padding: 5vh 0;
    width: 100%;
 }
@@ -157,6 +155,7 @@ form {
          font-size: 3vw;
       }
    }
+
    form {
       border-radius: 1vw;
       padding: 2vw;
@@ -171,6 +170,7 @@ form {
       }
       .name__input,
       .phone__input {
+         @extend %field;
          height: 8vw;
          margin-bottom: 2vw;
          font-size: 1.8vw;
@@ -182,15 +182,10 @@ form {
          font-size: 2vw;
       }
       .submit__button {
-
-         font-family: inherit;
-
          font-size: 2.5vw;
-         font-weight: 600;
          height: 6vw;
          width: calc(100% - 4vw);
          border-radius: 1vw;
-         cursor: pointer;
       }
    }
 }

@@ -7,12 +7,9 @@
    background-size: cover;
    background-repeat: no-repeat;
 
-   .top {
-      h1 {
-         font: {
-            size: 10vh;
-         }
-      }
+   .back__button {
+      background-color: #89d8ed;
+      text-shadow: #000 1px 1px 3px;
    }
 
    .middle {
@@ -21,14 +18,13 @@
 
       .room {
          @include mixins.center-flex;
-         height: initial;
          flex-direction: column;
-         transition: var(--transition);
          background-color: #eee;
          padding: 2vh;
          margin-bottom: 10px;
          cursor: pointer;
          border-radius: 8px;
+         height: initial;
 
          h2 {
             margin: 0;
@@ -37,24 +33,33 @@
          .seats {
             display: grid;
             justify-items: center;
-            grid-template-columns: repeat(auto-fill, calc((100% / 3) - (1vh / 3)));
+            max-height: 0;
+            overflow: hidden;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             width: 100%;
-            margin-top: 1vh;
-            column-gap: 0.5vh;
+            margin-top: 3vh;
+            gap: 0.5vh;
+            transition: var(--transition);
 
             .seat {
                display: grid;
                place-items: center;
                font-size: 2vh;
-               width: 18vw;
-               height: 18vw;
+               width: 100%;
+               padding: 1vh 0;
                background-color: lightblue;
                border: #000 1px solid;
                border-radius: 1vh;
-               margin-bottom: 1vh;
+
+               &.booked {
+                  background-color: dodgerblue;
+                  color: var(--color-white);
+               }
             }
 
             &.hidden {
+               transition: var(--transition);
                display: none;
             }
          }
@@ -62,6 +67,24 @@
    }
    .bottom {
       width: 100%;
-      height: 300px;
+      height: 100px;
+      background-color: aqua;
+      border: 5vh solid red;
+      border-left-color: transparent;
+      border-right-color: transparent;
    }
+}
+
+// ================ Medium Devices =============================
+@media (min-width: 768px) {
+}
+// ================ Large Devices =============================
+@media (min-width: 992px) {
+}
+// ================ Desktop Devices =============================
+@media (min-width: 1200px) {
+}
+
+// ================ Landscape Orientation ========================
+@media (max-height: 767px) and (orientation: landscape) {
 }
