@@ -18,14 +18,50 @@
    </head>
    <body>
       <div class="container booking__container">
-         Under Construction
          <!-- ========== Top Section =============== -->
-         <!-- Empty -->
+         <div class="top">
+            <a href="index.html" class="back__button button">
+               <span class="button__icon"><i class="fa-solid fa-arrow-left"></i></span>
+               <span class="button__text"><h3>عودة</h3></span>
+            </a>
+         </div>
 
-         <!-- ========== Home Section =============== -->
-         <!-- Empty -->
+         <!-- ========== Middle Section =============== -->
+         <div class="middle">
+            <div class="room button" onclick="toggleSeats(this)">
+               <h2>Room 1</h2>
+               <div class="seats hidden">
+                  <span class="seat">Seat 1</span>
+                  <span class="seat">Seat 2</span>
+                  <span class="seat">Seat 3</span>
+                  <span class="seat">Seat 3</span>
+                  <!-- Add more seats here as needed -->
+               </div>
+            </div>
 
+            <div class="room button" onclick="toggleSeats(this)">
+               <h2>Room 2</h2>
+               <div class="seats hidden">
+                  <span class="seat">Seat A</span>
+                  <span class="seat">Seat B</span>
+                  <!-- Add more seats here as needed -->
+               </div>
+            </div>
+
+            <div class="room button" onclick="toggleSeats(this)">
+               <h2>Room 3</h2>
+               <div class="seats hidden">
+                  <span class="seat">Seat X</span>
+                  <span class="seat">Seat Y</span>
+                  <span class="seat">Seat Z</span>
+                  <!-- Add more seats here as needed -->
+               </div>
+            </div>
+         </div>
          <!-- ========== Bottom Section =============== -->
-         <!-- Empty -->
+         <div class="bottom"></div>
+      </div>
+
+      <script src="./JS/booking.js"></script>
    </body>
 </html>

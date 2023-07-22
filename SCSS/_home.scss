@@ -1,10 +1,21 @@
 @use "./theIncludes/mixins";
 @use "./theIncludes/variables";
 
+// ================ All Devices =============================
 .home__container {
    background-image: url(../Assets/Backgrounds/BG-1.jpeg);
    background-repeat: no-repeat;
    background-size: cover;
+
+   .top {
+      height: 25vh;
+   }
+
+   .middle {
+   }
+
+   .bottom {
+   }
 
    .logo {
       font: {
@@ -14,8 +25,10 @@
       }
    }
 
-   .middle .button {
-      margin-bottom: 2vh;
+   .middle {
+      .button {
+         margin-bottom: 2vh;
+      }
    }
 
    .button {

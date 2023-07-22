@@ -1,0 +1,67 @@
+@use "./theIncludes/mixins";
+@use "./theIncludes/variables";
+
+// ================ All Devices =============================
+.booking__container {
+   background-image: url(../Assets/Backgrounds/multi-color.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   .top {
+      h1 {
+         font: {
+            size: 10vh;
+         }
+      }
+   }
+
+   .middle {
+      justify-content: flex-start;
+      padding-top: 10vh;
+
+      .room {
+         @include mixins.center-flex;
+         height: initial;
+         flex-direction: column;
+         transition: var(--transition);
+         background-color: #eee;
+         padding: 2vh;
+         margin-bottom: 10px;
+         cursor: pointer;
+         border-radius: 8px;
+
+         h2 {
+            margin: 0;
+         }
+
+         .seats {
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(auto-fill, calc((100% / 3) - (1vh / 3)));
+            width: 100%;
+            margin-top: 1vh;
+            column-gap: 0.5vh;
+
+            .seat {
+               display: grid;
+               place-items: center;
+               font-size: 2vh;
+               width: 18vw;
+               height: 18vw;
+               background-color: lightblue;
+               border: #000 1px solid;
+               border-radius: 1vh;
+               margin-bottom: 1vh;
+            }
+
+            &.hidden {
+               display: none;
+            }
+         }
+      }
+   }
+   .bottom {
+      width: 100%;
+      height: 300px;
+   }
+}
