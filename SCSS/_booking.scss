@@ -59,8 +59,8 @@
             }
 
             &.hidden {
+               margin: 0;
                transition: var(--transition);
-               display: none;
             }
          }
       }
