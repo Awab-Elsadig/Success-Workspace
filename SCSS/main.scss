@@ -19,7 +19,7 @@
    overflow-y: auto;
 }
 
-.top {
+header {
    @include mixins.center-flex;
    padding: 5vh 0;
    width: 100%;
@@ -34,7 +34,7 @@
    width: 100%;
 }
 
-.bottom {
+footer {
    @include mixins.center-flex;
    padding: 5vh 0;
    width: 100%;
