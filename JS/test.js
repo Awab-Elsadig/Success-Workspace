@@ -8,6 +8,8 @@ window.onload = () => {
          a.classList.remove("clicked");
       }
    });
+
+   
 };
 
 document.querySelectorAll(".test").forEach((a) => {
