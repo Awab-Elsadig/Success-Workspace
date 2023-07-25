@@ -94,7 +94,11 @@
                flex-direction: column;
                padding: 3vh;
                font-size: 2vh;
-               text-align: right;
+               .seatInSelected {
+                  display: flex;
+                  direction: rtl;
+                  padding-bottom: 1vh;
+               }
             }
          }
 
@@ -169,6 +173,11 @@
                .selected {
                   padding: 3vw;
                   font-size: 2vw;
+                  .seatInSelected {
+                     display: flex;
+                     background-color: red;
+                     padding: 30px;
+                  }
                }
             }
 
