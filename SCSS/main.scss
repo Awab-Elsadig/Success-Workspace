@@ -7,6 +7,7 @@
 @use "./weekly_membership";
 @use "./monthly_membership";
 @use "./contact";
+@use "./checkout";
 
 // ================ All Devices =============================
 .container {
@@ -47,6 +48,7 @@ footer {
    @include mixins.center-flex;
    position: relative;
    box-shadow: inset #444 0 0 1vh;
+   
 
    .button__icon {
       @include mixins.center-flex;

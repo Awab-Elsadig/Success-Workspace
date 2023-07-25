@@ -8,8 +8,6 @@ window.onload = () => {
          a.classList.remove("clicked");
       }
    });
-
-   
 };
 
 document.querySelectorAll(".test").forEach((a) => {
@@ -19,3 +17,12 @@ document.querySelectorAll(".test").forEach((a) => {
       sessionStorage.setItem(a.getAttribute("set-id"), isClicked);
    });
 });
+
+let theTests = [...document.querySelectorAll(".test")];
+theTests.push(document.createElement("a"));
+console.log(theTests);
+
+let obj = {
+   mood: "happy",
+   quality: "great",
+};

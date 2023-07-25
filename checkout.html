@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="./Assets/Page_Icons/contact.png" />
+      <title>Contact</title>
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="./CSS/main.css" />
+
+      <!-- FontAwesome -->
+      <link rel="stylesheet" href="./CSS/all.min.css" />
+   </head>
+   <body>
+      <div class="container checkout__container">
+         <header>
+            <a href="booking.html" class="back__button button">
+               <span class="button__icon"><i class="fa-solid fa-arrow-left"></i></span>
+               <span class="button__text"><h3>عودة</h3></span>
+            </a>
+         </header>
+         <section class="middle">
+            <form action="" id="telegramForm">
+               <h3>Name</h3>
+               <input name="name" type="text" placeholder="eg. Ahmed Salah" class="name__input" required />
+               <h3>Phone</h3>
+               <input name="phone__number" type="text" placeholder="eg. 01111111111" class="phone__input" required />
+               <h3>Seats</h3>
+               <div class="selected"></div>
+               <button type="submit" class="submit__button">Submit</button>
+            </form>
+         </section>
+      </div>
+
+      <script src="./JS/checkout.js"></script>
+   </body>
+</html>
