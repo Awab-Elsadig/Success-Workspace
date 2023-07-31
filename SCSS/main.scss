@@ -13,7 +13,8 @@
 .container {
    display: flex;
    flex-direction: column;
-   flex: 1;
+   // flex: 1;
+   min-height: 100lvh;
    padding: 0 15vw;
    font-family: "Rubik", sans-serif;
 }
