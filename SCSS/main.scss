@@ -14,7 +14,6 @@
    display: flex;
    flex-direction: column;
    flex: 1;
-   // width: 100%;
    padding: 0 15vw;
    font-family: "Rubik", sans-serif;
 }
@@ -82,6 +81,10 @@ form {
       width: 100%;
       padding: 2vh;
       border-radius: 1vh;
+      box-shadow: #000 0.3vh 0.3vh 0.3vh;
+      &:focus {
+         box-shadow: #000 0.3vh 0.3vh 0.3vh, inset dodgerblue 0 0 0 0.5vh;
+      }
    }
 
    .name__input,
@@ -90,7 +93,6 @@ form {
       height: 8vh;
       margin-bottom: 2vh;
       font-size: 1.8vh;
-      box-shadow: #000 3px 3px 2px;
    }
    .message__input {
       @extend %field;
@@ -101,7 +103,7 @@ form {
    .submit__button {
       margin-top: 5vh;
       height: 6vh;
-      width: calc(100% - 4vh);
+      width: 100%;
       border-radius: 1vh;
       box-shadow: #000 0px 0px 3px inset;
 
@@ -122,11 +124,10 @@ form {
    form {
       width: 550px;
       .name__input,
-      .phone__input {
-         font-size: 1.6vh;
-      }
+      .phone__input,
       .message__input {
-         font-size: 1.8vh;
+         font-size: 2vh;
+         font-size: 2vh;
       }
    }
 }
@@ -139,7 +140,25 @@ form {
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
+   .container {
+      padding: 0 15vh;
+   }
+
+   header {
+      padding-top: 5vw;
+   }
+
+   main {
+      padding: 5vw 0;
+   }
+
+   footer {
+      padding-bottom: 5vw;
+   }
+
+   // ****** Button **********
    .button {
+      width: 50vw;
       border-radius: 2vw;
       height: 10vw;
       .button__icon {
@@ -152,7 +171,9 @@ form {
       }
    }
 
+   // ****** Form **********
    form {
+      width: 50vw;
       border-radius: 1vw;
       padding: 2vw;
       h3 {
@@ -163,6 +184,10 @@ form {
       %field {
          padding: 2vw;
          border-radius: 1vw;
+         box-shadow: #000 0.3vw 0.3vw 0.3vw;
+         &:focus {
+            box-shadow: #000 0.3vw 0.3vw 0.3vw, inset dodgerblue 0 0 0 0.5vw;
+         }
       }
       .name__input,
       .phone__input {
@@ -180,7 +205,7 @@ form {
       .submit__button {
          font-size: 2.5vw;
          height: 6vw;
-         width: calc(100% - 4vw);
+         width: 100%;
          border-radius: 1vw;
       }
    }
