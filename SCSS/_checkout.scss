@@ -9,14 +9,13 @@
 
    .back__button {
       background-color: #ff92b9;
-      text-shadow: #000 2px 2px 1px;
    }
 
    main {
       justify-content: flex-start;
       form {
          color: var(--color-white);
-         text-shadow: #000 2px 2px 1px;
+         text-shadow: #000 0.25vh 0.25vh 0vh;
          background-color: #6439ad;
 
          .selected {
@@ -25,10 +24,15 @@
             width: 100%;
             border-radius: 1vh;
             padding: 2vh;
-            .seat,
+            text-shadow: none;
+            color: var(--color-black);
+
+            .bookedSeat {
+               font-size: 2vh;
+            }
             .total__price {
-               color: var(--color-black);
-               text-shadow: none;
+               margin-top: 2vh;
+               font-size: 3vh;
             }
          }
       }

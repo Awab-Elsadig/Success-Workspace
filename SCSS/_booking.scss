@@ -9,35 +9,28 @@
 
    .back__button {
       background-color: #89d8ed;
-      text-shadow: #000 1px 1px 3px;
    }
 
    main {
-      justify-content: flex-start;
-      padding-top: 10vh;
-      // flex: none;
-      // height: 300px;
-      overflow-y: auto;
-
       .room {
-         flex-direction: column;
+         flex-direction: column; 
          background-image: url("../Assets/Backgrounds/BG-2.jpeg");
          background-repeat: no-repeat;
          background-size: cover;
          padding: 2vh;
          margin-bottom: 2vh;
-         height: initial;
+         height: auto;
          cursor: pointer;
 
          .seats {
             display: grid;
             justify-items: center;
-            max-height: 0;
-            overflow: hidden;
             grid-template-columns: repeat(3, 1fr);
             width: 100%;
-            margin-top: 3vh;
+            margin-top: 2vh;
             gap: 0.5vh;
+            max-height: 0;
+            overflow: hidden;
             transition: var(--transition);
 
             .seat {
@@ -46,7 +39,7 @@
                font-size: 2vh;
                font-weight: 700;
                width: 100%;
-               padding: 1vh 0;
+               height: 5vh;
                background-color: lightblue;
                border: #000 1px solid;
                border-radius: 1vh;
@@ -55,11 +48,14 @@
                   background-color: dodgerblue;
                   color: var(--color-white);
                }
+               &.reserved {
+                  background-color: rgb(19, 19, 68);
+                  color: #eee;
+               }
             }
 
             &.hidden {
                margin: 0;
-               transition: var(--transition);
             }
          }
       }
@@ -150,7 +146,7 @@
             margin-bottom: 2vw;
 
             .seats {
-               margin-top: 3vw;
+               margin-top: 2vw;
                gap: 0.5vw;
 
                .seat {

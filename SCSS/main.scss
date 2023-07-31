@@ -13,8 +13,8 @@
 .container {
    display: flex;
    flex-direction: column;
-   // flex: 1;
-   min-height: 100lvh;
+   flex: 1;
+   min-height: 100dvh;
    padding: 0 15vw;
    font-family: "Rubik", sans-serif;
 }
@@ -72,7 +72,7 @@ form {
    border-radius: 1vh;
    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.5vh 0.5vh;
 
-   h3 {
+   > h3 {
       font-size: 2.2vh;
       align-self: flex-start;
       margin: 0 0 0.5vh 1vh;
@@ -102,11 +102,11 @@ form {
       font-size: 1.8vh;
    }
    .submit__button {
-      margin-top: 5vh;
+      margin-top: 3vh;
       height: 6vh;
       width: 100%;
       border-radius: 1vh;
-      box-shadow: #000 0px 0px 3px inset;
+      box-shadow: #000 0 0 0.5vh inset;
 
       cursor: pointer;
       font: {
@@ -204,10 +204,13 @@ form {
          font-size: 2vw;
       }
       .submit__button {
-         font-size: 2.5vw;
+         margin-top: 3vw;
          height: 6vw;
-         width: 100%;
          border-radius: 1vw;
+         box-shadow: #000 0 0 0.5vw inset;
+         font: {
+            size: 2.5vw;
+         }
       }
    }
 }

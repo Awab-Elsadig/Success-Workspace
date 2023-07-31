@@ -11,9 +11,13 @@ rooms.forEach((room) => {
 // Add event listener to each seat
 let seats = document.querySelectorAll(".seat");
 seats.forEach((seat) => {
+   // Check for Reserved
+   if (seat.classList.contains("reserved")) seat.textContent = "محجوز";
+
+   // Add Event Listener
    seat.addEventListener("click", (event) => {
       event.stopPropagation();
-      toggleSeatBooking(seat);
+      toggleSeat(seat);
    });
 });
 
@@ -33,18 +37,15 @@ function toggleRoom(room) {
    seatsElement.classList.toggle("hidden");
 
    // Set max-height to seats if room is expanded
-   rooms.forEach((room) => {
-      let seatsElement = room.querySelector(".seats");
-      if (room.classList.contains("expanded")) {
-         seatsElement.style.maxHeight = `${seatsElement.scrollHeight + 4}px`;
-      } else {
-         seatsElement.style.maxHeight = 0;
-      }
-   });
+   if (currentRoom.classList.contains("expanded")) {
+      seatsElement.style.maxHeight = `${seatsElement.scrollHeight}px`;
+   } else {
+      seatsElement.style.maxHeight = 0;
+   }
 }
 
 // Function to change seat status to booked and update selction
-function toggleSeatBooking(seat) {
+function toggleSeat(seat) {
    if (!seat.classList.contains("reserved")) {
       seat.classList.toggle("booked");
       updateSelection();

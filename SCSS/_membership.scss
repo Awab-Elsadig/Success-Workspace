@@ -1,6 +1,7 @@
 @use "./theIncludes/mixins";
 @use "./theIncludes/variables";
 
+// ================ All Devices =============================
 .membership__container {
    @include mixins.center-flex;
    background-image: url(../Assets/Backgrounds/BG-2.jpeg);
@@ -63,6 +64,16 @@
          text-shadow: #444 0 0 10px;
       }
    }
+}
+
+// ================ Medium Devices =============================
+@media (min-width: 768px) {
+}
+// ================ Large Devices =============================
+@media (min-width: 992px) {
+}
+// ================ Desktop Devices =============================
+@media (min-width: 1200px) {
 }
 
 // ================ Landscape Orientation ========================
