@@ -12,7 +12,7 @@
       text-shadow: #000 2px 2px 1px;
    }
 
-   .middle {
+   main {
       justify-content: flex-start;
       form {
          color: var(--color-white);
@@ -25,7 +25,8 @@
             width: 100%;
             border-radius: 1vh;
             padding: 2vh;
-            .seat, .total__price {
+            .seat,
+            .total__price {
                color: var(--color-black);
                text-shadow: none;
             }

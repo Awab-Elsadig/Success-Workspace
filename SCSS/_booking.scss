@@ -12,7 +12,7 @@
       text-shadow: #000 1px 1px 3px;
    }
 
-   .middle {
+   main {
       justify-content: flex-start;
       padding-top: 10vh;
       // flex: none;
@@ -142,7 +142,7 @@
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
    .booking__container {
-      .middle {
+      main {
          padding-top: 10vh;
 
          .room {

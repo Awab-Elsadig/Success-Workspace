@@ -1,28 +1,26 @@
+let theAs = document.querySelectorAll(".test");
+
+// Set default values to sessionStorage if unvailable on window load
 window.onload = () => {
-   document.querySelectorAll(".test").forEach((a) => {
-      console.log(`This is for test number ${a.getAttribute("set-id")}: ${sessionStorage.getItem(a.getAttribute("set-id"))}`);
-      const isClicked = sessionStorage.getItem(a.getAttribute("set-id"));
-      if (isClicked === "true") {
-         a.classList.add("clicked");
-      } else {
-         a.classList.remove("clicked");
-      }
-   });
+   // If no values available
+   if (sessionStorage.getItem("valuesAvailable") === null) {
+      theAs.forEach((a) => {
+         sessionStorage.setItem(`Test ${a.getAttribute("set-id")}`, false);
+      });
+      sessionStorage.setItem("valuesAvailable", true);
+   } else {
+      // If there is values
+      theAs.forEach((a) => {
+         JSON.parse(sessionStorage.getItem(`Test ${a.getAttribute("set-id")}`)) ? a.classList.add("clicked") : a.classList.remove("clicked");
+      });
+   }
 };
 
-document.querySelectorAll(".test").forEach((a) => {
-   a.addEventListener("click", () => {
+// Function to add the clicked class
+theAs.forEach((a) => {
+   a.onclick = () => {
       a.classList.toggle("clicked");
-      const isClicked = a.classList.contains("clicked");
-      sessionStorage.setItem(a.getAttribute("set-id"), isClicked);
-   });
+      JSON.parse(sessionStorage.getItem(`Test ${a.getAttribute("set-id")}`)) ? sessionStorage.setItem(`Test ${a.getAttribute("set-id")}`, false) : sessionStorage.setItem(`Test ${a.getAttribute("set-id")}`, true);
+      console.log(sessionStorage.getItem(`Test ${a.getAttribute("set-id")}`));
+   };
 });
-
-let theTests = [...document.querySelectorAll(".test")];
-theTests.push(document.createElement("a"));
-console.log(theTests);
-
-let obj = {
-   mood: "happy",
-   quality: "great",
-};

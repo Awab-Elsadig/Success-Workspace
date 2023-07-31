@@ -1,15 +1,32 @@
-let selection = document.querySelector(".selected");
+// Function to get the booked seats data from sessionStorage
+function getBookedSeatsData() {
+   const bookedSeatsData = JSON.parse(sessionStorage.getItem("bookedSeats")) || [];
+   return bookedSeatsData;
+}
 
-let bookedSeatsData = JSON.parse(sessionStorage.getItem("bookedSeats"));
-bookedSeatsData.forEach((seat) => {
-   let theP = document.createElement("p");
-   theP.className = "seat";
-   theP.textContent = `${seat.room} - ${seat.seatNumber}`;
-   selection.append(theP);
-});
-selection.append(document.createElement("br"));
-let theH2 = document.createElement("h2");
-theH2.className = "total__price";
-theH2.textContent = `Total: ${bookedSeatsData.length * 30   }EGP`;
+// Function to display booked seats on the checkout page
+function displayBookedSeats(bookedSeatsData, bookedSeatsContainer) {
+   bookedSeatsContainer.innerHTML = "";
+   const seatPrice = 30;
 
-selection.append(theH2);
+   bookedSeatsData.forEach((bookedSeat) => {
+      const seatElement = document.createElement("p");
+      seatElement.textContent = `${bookedSeat.room} - ${bookedSeat.seatNumber}`;
+      seatElement.classList.add("bookedSeat");
+      bookedSeatsContainer.append(seatElement);
+   });
+   const priceElement = document.createElement("h3");
+   priceElement.textContent = `Total: ${bookedSeatsData.length * seatPrice} EGP`;
+   priceElement.classList.add("total__price")
+   bookedSeatsContainer.append(priceElement);
+}
+
+// Function to initialize the checkout page
+function initCheckoutPage() {
+   const bookedSeatsData = getBookedSeatsData();
+   const bookedSeatsContainer = document.querySelector(".selected");
+   displayBookedSeats(bookedSeatsData, bookedSeatsContainer);
+}
+
+// Call the initCheckoutPage function when the page is loaded
+window.addEventListener("load", initCheckoutPage());
