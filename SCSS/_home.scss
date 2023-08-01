@@ -6,17 +6,19 @@
    background-image: url(../Assets/Backgrounds/BG-1.jpeg);
    background-repeat: no-repeat;
    background-size: cover;
+
    .logo {
+      margin-bottom: -5rem;
       font: {
-         size: 10vh;
+         size: 10rem;
          family: Great Vibes;
          weight: 400;
       }
    }
-
+   
    main {
       .button {
-         margin-bottom: 2vh;
+         margin-bottom: 2rem;
       }
    }
 
@@ -40,7 +42,7 @@
 @media (min-width: 768px) {
    .home__container {
       .logo {
-         font-size: 15vh;
+         font-size: 15rem;
       }
    }
 }
@@ -55,7 +57,8 @@
 @media (max-height: 767px) and (orientation: landscape) {
    .home__container {
       .logo {
-         font-size: 10vw;
+         font-size: 10rem;
+         margin-bottom: -0.5em;
       }
    }
 }

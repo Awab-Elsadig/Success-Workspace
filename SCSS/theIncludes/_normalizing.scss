@@ -12,10 +12,8 @@
 }
 
 body {
-   min-height: 100svh;
    scroll-behavior: smooth;
    overflow-x: hidden;
-   overflow-y: auto;
    display: flex;
    flex-direction: column;
    transition: var(--transition);

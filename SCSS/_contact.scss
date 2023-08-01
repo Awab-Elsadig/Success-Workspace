@@ -10,10 +10,12 @@
       background-color: var(--color-teal);
    }
 
-   form {
-      color: var(--color-white);
-      background-color: var(--color-teal);
-      text-shadow: #000 0.25vh 0.25vh 0vh;
+   main {
+      form {
+         color: var(--color-white);
+         background-color: var(--color-teal);
+         text-shadow: #000 0.25em 0.2em 0;
+      }
    }
 }
 
