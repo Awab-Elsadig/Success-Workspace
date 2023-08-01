@@ -10,10 +10,15 @@
    flex-direction: column;
 
    .button {
+      &.back__button {
+         background-color: #7ebeac;
+      }
+
       &.weekly__button,
       &.monthly__button {
-         height: 15vh;
-         margin-bottom: 2vh;
+         height: 15rem;
+         margin-bottom: 2rem;
+         text-shadow: #0008 0.25em 0.25em;
 
          .button__text {
             right: 0;
@@ -21,24 +26,22 @@
             transform: none;
             height: 100%;
             width: 70%;
-            font-size: 2.2vh;
-            text-shadow: #000 2px 2px 3px;
 
             .type {
                position: absolute;
                right: 0;
                top: 0;
-               margin: 2vh;
+               font-size: 2rem;
+               margin: 2rem;
                text-align: right;
             }
-
             .price {
                position: absolute;
                right: 0;
                bottom: 0;
                width: max-content;
-               font-size: 4vh;
-               margin: 2vh;
+               font-size: 4rem;
+               margin: 2rem;
             }
          }
 
@@ -46,22 +49,15 @@
             top: 0;
             left: 0;
             transform: none;
-            margin: 1.5vh 0 0 1.5vh;
-            text-shadow: #000 1px 1px 2px;
+            margin: 2rem 0 0 2rem;
          }
-      }
-
-      &.back__button {
-         background-color: #7ebeac;
       }
 
       &.weekly__button {
          background-color: var(--color-mint);
-         text-shadow: #444 0 0 10px;
       }
       &.monthly__button {
          background-color: var(--color-magenta);
-         text-shadow: #444 0 0 10px;
       }
    }
 }
@@ -78,30 +74,4 @@
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
-   .membership__container {
-      .button {
-         &.weekly__button,
-         &.monthly__button {
-            height: 15vw;
-            margin-bottom: 2vw;
-
-            .button__text {
-               font-size: 3vw;
-
-               .type {
-                  margin: 2vw;
-               }
-
-               .price {
-                  font-size: 4vw;
-                  margin: 2vw;
-               }
-            }
-
-            .button__icon {
-               margin: 1.5vw 0 0 1.5vw;
-            }
-         }
-      }
-   }
 }
