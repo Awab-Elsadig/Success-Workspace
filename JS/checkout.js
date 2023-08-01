@@ -31,24 +31,22 @@ function initCheckoutPage() {
 // Call the initCheckoutPage function when the page is loaded
 window.addEventListener("load", initCheckoutPage());
 
-// Sending the message to Telegram
-// Get form data
-const formData = new FormData(document.getElementById("telegramForm"));
-const name = formData.get("name");
-const phone = formData.get("phone");
-const selected = document.querySelector(".selected").textContent;
-const bookingID = Math.floor(Math.random() * 1e4);
-
-document.getElementById("telegramForm").addEventListener("submit", function (event) {
+// Sent the data to Telegram
+const theForm = document.getElementById("telegramForm");
+theForm.addEventListener("submit", (event) => {
    event.preventDefault();
+
+   const formData = new FormData(theForm);
+   const name = formData.get("name");
+   const phone = formData.get("phone");
+   const selected = document.querySelector(".selected").textContent;
+   const bookingID = Math.floor(Math.random() * 1e4);
 
    const telegramBotApiToken = "5883112226:AAEEPlvFXlxFmevftpWLm0FxVB07YwOUrAo";
    const chatId = "1518879748";
 
-   // Construct the Telegram API URL
    const telegramUrl = `https://api.telegram.org/bot${telegramBotApiToken}/sendMessage`;
 
-   // Form the message content
    const text = `Booking:
 Name: ${name}
 Phone: ${phone}
@@ -81,14 +79,10 @@ Booking ID: #${bookingID}`;
       .catch((error) => {
          alert("An error occurred while sending the message. Please try again later.");
       });
+   const thePopup = document.createElement("div");
+   thePopup.classList.add("thePopup");
+   const popupBox = document.createElement("div");
+   popupBox.classList.add("popupBox");
+   thePopup.appendChild(popupBox);
+   document.querySelector("main").appendChild(thePopup);
 });
-
-function showPopup() {
-   // Form the message content
-   const text = `Name: ${name}
-Phone: ${phone}
-
-Selected:
-${selected}
-ID: #${bookingID}`;
-}
