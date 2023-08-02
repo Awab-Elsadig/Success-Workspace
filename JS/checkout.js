@@ -97,5 +97,5 @@ function showPopup(text) {
    
    popupBox.append(info);
    thePopup.appendChild(popupBox);
-   document.querySelector("main").appendChild(thePopup);
+   document.body.appendChild(thePopup);
 }

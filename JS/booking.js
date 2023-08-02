@@ -1,38 +1,61 @@
 let seatPrice = 30;
-
-// Add event listener to each room
 let rooms = document.querySelectorAll(".room");
-rooms.forEach((room) => {
-   room.addEventListener("click", () => {
-      toggleRoom(room);
-   });
-});
-
-// Add event listener to each seat
 let seats = document.querySelectorAll(".seat");
-seats.forEach((seat) => {
-   // Check for Reserved
-   if (seat.classList.contains("reserved")) seat.textContent = "محجوز";
-   // Add Event Listener
-   else {
+
+// Function to show popup
+function showPopup() {
+   let thePopup = document.querySelector(".thePopup");
+   let understoodButton = document.querySelector(".understoodButton");
+   setTimeout(() => {
+      thePopup.style.display = "grid";
+   }, 2000);
+
+   understoodButton.addEventListener("click", () => {
+      thePopup.style.opacity = 0;
+      setTimeout(() => {
+         thePopup.style.display = "none";
+      }, 1000);
+   });
+}
+
+// Functoin to check each room click
+function initRooms() {
+   rooms.forEach((room) => {
+      room.addEventListener("click", () => {
+         toggleRoom(room);
+      });
+   });
+}
+
+// Function to chech each seat click if not reserved
+function initSeats() {
+   seats.forEach((seat) => {
+      // Check for Reserved
+      if (seat.classList.contains("reserved")) {
+         seat.textContent = "محجوز";
+      }
       seat.addEventListener("click", (event) => {
          event.stopPropagation();
-         toggleSeat(seat);
+         if (!seat.classList.contains("reserved")) {
+            toggleSeat(seat);
+         }
       });
-   }
-});
+   });
+}
 
-// Add event listener to invoice
-let invoice = document.querySelector(".invoice");
-let selection = document.querySelector(".selection");
-invoice.addEventListener("click", () => {
-   invoice.classList.toggle("expanded");
-   if (invoice.classList.contains("expanded")) {
-      selection.style.maxHeight = `${selection.scrollHeight}px`;
-   } else {
-      selection.style.maxHeight = 0;
-   }
-});
+// Function to check invoice click
+function initInvoice() {
+   let invoice = document.querySelector(".invoice");
+   let selection = document.querySelector(".selection");
+   invoice.addEventListener("click", () => {
+      invoice.classList.toggle("expanded");
+      if (invoice.classList.contains("expanded")) {
+         selection.style.maxHeight = `${selection.scrollHeight}px`;
+      } else {
+         selection.style.maxHeight = 0;
+      }
+   });
+}
 
 // Function to expand or collapse a room
 function toggleRoom(room) {
@@ -44,7 +67,7 @@ function toggleRoom(room) {
       }
    });
 
-   // Toggle the expanded and hidden classes room and seatsElement
+   // Toggle the expanded and hidden classes for room and seatsElement
    currentRoom.classList.toggle("expanded");
    let seatsElement = currentRoom.querySelector(".seats");
    seatsElement.classList.toggle("hidden");
@@ -96,3 +119,13 @@ function updateSelection() {
       document.querySelector(".checkout__button").style.display = "none";
    }
 }
+
+// Initialize the page
+function initBookingPage() {
+   showPopup();
+   initRooms();
+   initSeats();
+   initInvoice();
+}
+
+window.addEventListener("click", initBookingPage());

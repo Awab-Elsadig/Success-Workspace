@@ -36,25 +36,24 @@
             }
          }
       }
+   }
+   .thePopup {
+      width: 100dvw;
+      height: 100%;
+      background-color: #0008;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: grid;
+      place-items: center;
 
-      .thePopup {
-         width: 100dvw;
-         height: 100dvh;
-         background-color: #0008;
-         position: absolute;
-         top: 0;
-         left: 0;
-         display: grid;
-         place-items: center;
-
-         .popupBox {
-            width: 70vw;
-            min-height: 30rem;
-            background-color: beige;
-            border-radius: 1rem;
-            padding: 1rem;
-            font-size: 1.5rem;
-         }
+      .popupBox {
+         width: 70vw;
+         min-height: 30rem;
+         background-color: beige;
+         border-radius: 1rem;
+         padding: 1rem;
+         font-size: 1.5rem;
       }
    }
 }
