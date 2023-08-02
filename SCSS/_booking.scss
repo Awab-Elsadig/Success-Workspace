@@ -7,19 +7,29 @@
    background-size: cover;
    background-repeat: no-repeat;
 
+   main {
+      height: 60dvh;
+      flex: auto;
+   }
+   footer {
+      height: 25dvh;
+   }
+
    .back__button {
       background-color: #89d8ed;
    }
 
    main {
+      justify-content: flex-start;
       .room {
-         flex-direction: column; 
+         flex-direction: column;
          background-image: url("../Assets/Backgrounds/BG-2.jpeg");
          background-repeat: no-repeat;
          background-size: cover;
-         padding: 2vh;
-         margin-bottom: 2vh;
+         padding: 2rem;
+         margin-bottom: 2rem;
          height: auto;
+         font-size: 1.6rem;
          cursor: pointer;
 
          .seats {
@@ -27,8 +37,8 @@
             justify-items: center;
             grid-template-columns: repeat(3, 1fr);
             width: 100%;
-            margin-top: 2vh;
-            gap: 0.5vh;
+            margin-top: 2rem;
+            gap: 0.5rem;
             max-height: 0;
             overflow: hidden;
             transition: var(--transition);
@@ -36,13 +46,13 @@
             .seat {
                display: grid;
                place-items: center;
-               font-size: 2vh;
+               font-size: 1.5rem;
                font-weight: 700;
                width: 100%;
-               height: 5vh;
+               height: 6rem;
                background-color: lightblue;
                border: #000 1px solid;
-               border-radius: 1vh;
+               border-radius: 0.5rem;
 
                &.booked {
                   background-color: dodgerblue;
@@ -64,55 +74,78 @@
    footer {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
+      padding: 3rem;
 
       .invoice {
          @include mixins.center-flex;
          flex-direction: column;
          width: 70vw;
-         padding: 2vh;
+         padding: 2rem;
          background-color: #eee;
-         box-shadow: inset #000 0 0 1vh;
-         border-radius: 1vh;
-         font-size: 3vh;
+         box-shadow: #000 0 0 0 0.3rem;
+         border-radius: 1rem;
          font-weight: 600;
+         z-index: 1;
 
+         .title {
+            position: relative;
+            font-size: 1.6rem;
+            .down-arrow.left {
+               position: absolute;
+               top: 50%;
+               left: -3rem;
+               translate: 0 -50%;
+               rotate: -90deg;
+               animation: lefty 0.5s infinite;
+               transition: var(--transition);
+            }
+            .down-arrow.right {
+               position: absolute;
+               right: -3rem;
+               top: 50%;
+               translate: 0 -50%;
+               rotate: 90deg;
+               animation: righty 0.5s infinite;
+               transition: var(--transition);
+            }
+         }
+         
          .selection {
             width: 90%;
             text-align: center;
-            hr {
-               background-color: #000;
-               width: 100%;
-               height: 2px;
-            }
-            .selected {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            .selectedSeats {
                display: flex;
                flex-direction: column;
                padding: 3vh;
                font-size: 2vh;
+               max-height: 20rem;
+               overflow-y: auto;
                .seatInSelected {
                   display: flex;
                   padding-bottom: 1vh;
                }
             }
-         }
-
-         .total__price,
-         .checkout__button {
-            @include mixins.center-flex;
-            font-size: 3vh;
-            color: #fff;
-            background-color: #555;
-            padding: 1vh 0;
-            margin-bottom: 1vh;
-            width: 90%;
-            border-radius: 2vh;
-            span {
-               margin: 0 0.3vh 0 1vh;
+            .total__price,
+            .checkout__button {
+               @include mixins.center-flex;
+               font-size: 3vh;
+               color: #fff;
+               background-color: #555;
+               padding: 1vh 0;
+               margin-bottom: 1vh;
+               width: 100%;
+               border-radius: 2vh;
+               span {
+                  margin: 0 0.3vh 0 1vh;
+               }
             }
-         }
-         .checkout__button {
-            display: none;
+            .checkout__button {
+               display: none;
+            }
          }
       }
    }
@@ -188,5 +221,26 @@
             }
          }
       }
+   }
+}
+
+// ########### Animations ##################
+@keyframes lefty {
+   0%,
+   100% {
+      transform: translate(0);
+   }
+   50% {
+      transform: translateY(30%);
+   }
+}
+
+@keyframes righty {
+   0%,
+   100% {
+      transform: translate(0);
+   }
+   50% {
+      transform: translateY(30%);
    }
 }

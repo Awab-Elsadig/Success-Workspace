@@ -13,12 +13,25 @@ let seats = document.querySelectorAll(".seat");
 seats.forEach((seat) => {
    // Check for Reserved
    if (seat.classList.contains("reserved")) seat.textContent = "محجوز";
-
    // Add Event Listener
-   seat.addEventListener("click", (event) => {
-      event.stopPropagation();
-      toggleSeat(seat);
-   });
+   else {
+      seat.addEventListener("click", (event) => {
+         event.stopPropagation();
+         toggleSeat(seat);
+      });
+   }
+});
+
+// Add event listener to invoice
+let invoice = document.querySelector(".invoice");
+let selection = document.querySelector(".selection");
+invoice.addEventListener("click", () => {
+   invoice.classList.toggle("expanded");
+   if (invoice.classList.contains("expanded")) {
+      selection.style.maxHeight = `${selection.scrollHeight}px`;
+   } else {
+      selection.style.maxHeight = 0;
+   }
 });
 
 // Function to expand or collapse a room
@@ -36,12 +49,15 @@ function toggleRoom(room) {
    let seatsElement = currentRoom.querySelector(".seats");
    seatsElement.classList.toggle("hidden");
 
-   // Set max-height to seats if room is expanded
-   if (currentRoom.classList.contains("expanded")) {
-      seatsElement.style.maxHeight = `${seatsElement.scrollHeight}px`;
-   } else {
-      seatsElement.style.maxHeight = 0;
-   }
+   // Expand the current room
+   rooms.forEach((room) => {
+      const seatsElement = room.querySelector(".seats");
+      if (room.classList.contains("expanded")) {
+         seatsElement.style.maxHeight = `${seatsElement.scrollHeight}px`;
+      } else {
+         seatsElement.style.maxHeight = 0;
+      }
+   });
 }
 
 // Function to change seat status to booked and update selction
@@ -54,9 +70,9 @@ function toggleSeat(seat) {
 
 // Function to update the selected seats display
 function updateSelection() {
-   let selection = document.querySelector(".selected");
+   let selectedSeats = document.querySelector(".selectedSeats");
    let bookedSeats = document.querySelectorAll(".booked");
-   selection.textContent = "";
+   selectedSeats.textContent = "";
 
    // Create Div with Room and Seat Number and Append to bookedSeats
    let sessionSeats = [];
@@ -68,7 +84,7 @@ function updateSelection() {
       sessionSeats.push(currentSeat);
       let theP = document.createElement("p");
       theP.textContent = `${currentSeat.room} - ${currentSeat.seatNumber}\n`;
-      selection.append(theP);
+      selectedSeats.append(theP);
    });
    sessionStorage.setItem("bookedSeats", JSON.stringify(sessionSeats));
 
