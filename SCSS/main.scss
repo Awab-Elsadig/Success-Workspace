@@ -1,4 +1,3 @@
-@use "./theIncludes/normalizing";
 @use "./theIncludes/mixins";
 @use "./theIncludes/variables";
 @use "./home";
@@ -8,6 +7,29 @@
 @use "./monthly_membership";
 @use "./contact";
 @use "./checkout";
+
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   display: flex;
+   flex-direction: column;
+   transition: var(--transition);
+}
+
+a {
+   color: #fff;
+}
 
 html {
    font-size: 62.5%;

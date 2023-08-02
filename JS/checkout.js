@@ -42,19 +42,24 @@ theForm.addEventListener("submit", (event) => {
    const selected = document.querySelector(".selected").textContent;
    const bookingID = Math.floor(Math.random() * 1e4);
 
-   const telegramBotApiToken = "5883112226:AAEEPlvFXlxFmevftpWLm0FxVB07YwOUrAo";
-   const chatId = "1518879748";
-
-   const telegramUrl = `https://api.telegram.org/bot${telegramBotApiToken}/sendMessage`;
-
    const text = `Booking:
 Name: ${name}
 Phone: ${phone}
 
 Selected:
 ${selected}
-
 Booking ID: #${bookingID}`;
+
+   sendTelegram(text);
+   showPopup(text);
+
+   theForm.reset();
+});
+
+function sendTelegram(text) {
+   const telegramBotApiToken = "5883112226:AAEEPlvFXlxFmevftpWLm0FxVB07YwOUrAo";
+   const chatId = "1518879748";
+   const telegramUrl = `https://api.telegram.org/bot${telegramBotApiToken}/sendMessage`;
 
    // Prepare the data to send to Telegram
    const data = new URLSearchParams();
@@ -79,10 +84,18 @@ Booking ID: #${bookingID}`;
       .catch((error) => {
          alert("An error occurred while sending the message. Please try again later.");
       });
+}
+
+function showPopup(text) {
    const thePopup = document.createElement("div");
    thePopup.classList.add("thePopup");
    const popupBox = document.createElement("div");
    popupBox.classList.add("popupBox");
+   const info = document.createElement("span");
+   popupBox.classList.add("popupInfo");
+   popupBox.innerText = text;
+   
+   popupBox.append(info);
    thePopup.appendChild(popupBox);
    document.querySelector("main").appendChild(thePopup);
-});
+}

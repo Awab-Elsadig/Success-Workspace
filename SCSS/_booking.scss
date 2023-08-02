@@ -7,6 +7,7 @@
    background-size: cover;
    background-repeat: no-repeat;
 
+   
    main {
       height: 60dvh;
       flex: auto;
@@ -14,11 +15,11 @@
    footer {
       height: 25dvh;
    }
-
+   
    .back__button {
       background-color: #89d8ed;
    }
-
+   
    main {
       justify-content: flex-start;
       .room {
@@ -42,7 +43,7 @@
             max-height: 0;
             overflow: hidden;
             transition: var(--transition);
-
+            
             .seat {
                display: grid;
                place-items: center;
@@ -53,7 +54,7 @@
                background-color: lightblue;
                border: #000 1px solid;
                border-radius: 0.5rem;
-
+               
                &.booked {
                   background-color: dodgerblue;
                   color: var(--color-white);
@@ -70,7 +71,7 @@
          }
       }
    }
-
+   
    footer {
       display: flex;
       justify-content: center;
@@ -110,7 +111,7 @@
                transition: var(--transition);
             }
          }
-         
+
          .selection {
             width: 90%;
             text-align: center;
