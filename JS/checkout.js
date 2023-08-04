@@ -92,10 +92,10 @@ function showPopup(text) {
    const popupBox = document.createElement("div");
    popupBox.classList.add("popupBox");
    const info = document.createElement("span");
-   popupBox.classList.add("popupInfo");
-   popupBox.innerText = text;
-   
+   info.classList.add("popupInfo");
+   info.innerText = text;
+
    popupBox.append(info);
    thePopup.appendChild(popupBox);
-   document.body.appendChild(thePopup);
+   document.querySelector(".checkout__container").appendChild(thePopup);
 }

@@ -51,9 +51,17 @@
          width: 70vw;
          min-height: 30rem;
          background: beige;
+         border: 0.2rem solid dodgerblue;
          border-radius: 1rem;
          padding: 1rem;
          font-size: 1.5rem;
+
+         .popupInfo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+         }
       }
    }
 }

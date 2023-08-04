@@ -1,4 +1,4 @@
-let seatPrice = 30;
+let SEAT_PRICE = 30;
 let rooms = document.querySelectorAll(".room");
 let seats = document.querySelectorAll(".seat");
 
@@ -6,15 +6,17 @@ let seats = document.querySelectorAll(".seat");
 function showPopup() {
    let thePopup = document.querySelector(".thePopup");
    let understoodButton = document.querySelector(".understoodButton");
+   thePopup.style.display = "grid";
    setTimeout(() => {
-      thePopup.style.display = "grid";
-   }, 2000);
+      thePopup.style.opacity = 1;
+   }, 500);
 
+   // Button to close popup
    understoodButton.addEventListener("click", () => {
       thePopup.style.opacity = 0;
       setTimeout(() => {
          thePopup.style.display = "none";
-      }, 1000);
+      }, 800);
    });
 }
 
@@ -112,7 +114,7 @@ function updateSelection() {
    sessionStorage.setItem("bookedSeats", JSON.stringify(sessionSeats));
 
    // Update Price and Show Checkout Button
-   document.querySelector(".total__price span").textContent = `${bookedSeats.length * seatPrice} EGP`;
+   document.querySelector(".total__price span").textContent = `${bookedSeats.length * SEAT_PRICE} EGP`;
    if (bookedSeats.length > 0) {
       document.querySelector(".checkout__button").style.display = "flex";
    } else {

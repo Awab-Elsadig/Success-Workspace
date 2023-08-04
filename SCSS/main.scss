@@ -90,6 +90,9 @@ footer {
    &.back__button {
       text-shadow: #0008 0.2em 0.2em;
    }
+   &:active {
+      scale: 0.96;
+   }
 }
 
 /* ****** Form ********** */
