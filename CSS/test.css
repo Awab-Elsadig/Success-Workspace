@@ -21,7 +21,7 @@ a {
    display: flex;
    text-decoration: none;
    color: #d4d4d4;
-   background-color: #333;
+   background: #333;
    width: max-content;
    padding: 30px;
    font-size: 40px;
@@ -31,5 +31,5 @@ a {
 }
 
 a.test.clicked {
-   background-color: dodgerblue;
+   background: dodgerblue;
 }

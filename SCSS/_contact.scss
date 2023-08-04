@@ -7,13 +7,13 @@
    background-repeat: no-repeat;
    background-size: cover;
    .back__button {
-      background-color: var(--color-teal);
+      background: var(--color-teal);
    }
 
    main {
       form {
          color: var(--color-white);
-         background-color: var(--color-teal);
+         background: var(--color-teal);
          text-shadow: #000 0.25em 0.2em 0;
       }
    }

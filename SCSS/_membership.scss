@@ -11,7 +11,7 @@
 
    .button {
       &.back__button {
-         background-color: #7ebeac;
+         background: #7ebeac;
       }
 
       &.weekly__button,
@@ -54,10 +54,10 @@
       }
 
       &.weekly__button {
-         background-color: var(--color-mint);
+         background: var(--color-mint);
       }
       &.monthly__button {
-         background-color: var(--color-magenta);
+         background: var(--color-magenta);
       }
    }
 }

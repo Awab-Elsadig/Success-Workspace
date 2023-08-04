@@ -8,13 +8,13 @@
    background-size: cover;
 
    .back__button {
-      background-color: var(--color-magenta);
+      background: var(--color-magenta);
    }
 
    form {
       color: var(--color-white);
       text-shadow: #000 2px 2px 1px;
-      background-color: var(--color-dark-magenta);
+      background: var(--color-dark-magenta);
    }
 }
 

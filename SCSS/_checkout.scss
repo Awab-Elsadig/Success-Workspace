@@ -8,7 +8,7 @@
    background-size: cover;
 
    .back__button {
-      background-color: #ff92b9;
+      background: #ff92b9;
    }
 
    main {
@@ -16,10 +16,10 @@
       form {
          color: var(--color-white);
          text-shadow: #000 0.25vh 0.25vh 0vh;
-         background-color: #6439ad;
+         background: #6439ad;
 
          .selected {
-            background-color: #eee;
+            background: #eee;
             min-height: 20vh;
             width: 100%;
             border-radius: 1vh;
@@ -40,7 +40,7 @@
    .thePopup {
       width: 100dvw;
       height: 100%;
-      background-color: #0008;
+      background: #0008;
       position: absolute;
       top: 0;
       left: 0;
@@ -50,7 +50,7 @@
       .popupBox {
          width: 70vw;
          min-height: 30rem;
-         background-color: beige;
+         background: beige;
          border-radius: 1rem;
          padding: 1rem;
          font-size: 1.5rem;
