@@ -51,7 +51,7 @@ ${selected}
 Booking ID: #${bookingID}`;
 
    sendTelegram(text);
-   showPopup(text);
+   // showPopup(text);
 
    theForm.reset();
 });
