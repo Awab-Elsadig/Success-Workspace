@@ -14,6 +14,9 @@
 
       <!-- FontAwesome -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+
+      <!-- Body Movin Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
    </head>
    <body>
       <div class="container contact__container">
@@ -26,14 +29,20 @@
          <main>
             <form action="" id="telegramForm">
                <h3>Name</h3>
-               <input name="name" type="text" placeholder="eg. Ahmed Salah" class="name__input" required />
+               <input name="name" type="text" placeholder="eg. Ahmed Salah" class="name__input" />
                <h3>Phone</h3>
-               <input name="phone__number" type="text" placeholder="eg. 01111111111" class="phone__input" required />
+               <input name="phone__number" type="text" placeholder="eg. 01111111111" class="phone__input" />
                <h3>Message</h3>
-               <textarea name="message" id="message" class="message__input" placeholder="Your message here" required></textarea>
+               <textarea name="message" id="message" class="message__input" placeholder="Your message here"></textarea>
                <button type="submit" class="submit__button">Submit</button>
             </form>
-         </section>
+         </main>
+         <div class="popup">
+            <div class="check-mark"></div>
+            <h2>حدث خطأ</h2>
+            <p>الرجاء المحاولة لاحقاً</p>
+         </div>
+         <div class="overlay"></div>
       </div>
 
       <script src="./JS/contact.js"></script>

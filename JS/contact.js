@@ -16,7 +16,7 @@ let admins = new Set([
    },
 ]);
 
-document.getElementById("telegramForm").addEventListener("submit", function (event) {
+document.getElementById("telegramForm").addEventListener("submit", (event) => {
    event.preventDefault();
 
    // Get form data
@@ -30,7 +30,6 @@ document.getElementById("telegramForm").addEventListener("submit", function (eve
    admins.forEach((ele) => {
       if (name === ele.name && +phone === ele.id && message === ele.message) {
          isAdmin = true;
-
          sessionStorage.setItem("admin", ele.name);
       }
    });
@@ -39,11 +38,8 @@ document.getElementById("telegramForm").addEventListener("submit", function (eve
       console.log("HELLO FROM IF");
       window.location.href = "../test.html";
    } else {
-      // Telegram API Token
       const telegramBotApiToken = "5883112226:AAEEPlvFXlxFmevftpWLm0FxVB07YwOUrAo";
       const chatId = "1518879748";
-
-      // Construct the Telegram API URL
       const telegramUrl = `https://api.telegram.org/bot${telegramBotApiToken}/sendMessage`;
 
       // Form the message content
@@ -69,7 +65,7 @@ ${message}`;
       })
          .then((response) => {
             if (response.ok) {
-               alert("Message sent successfully!");
+               showPopup();
             } else {
                alert("Failed to send message. Please try again later.");
             }
@@ -84,3 +80,27 @@ ${message}`;
    document.querySelector("form .phone__input").value = "";
    document.querySelector("form .message__input").value = "";
 });
+
+function showPopup(message) {
+   const overlay = document.querySelector(".overlay");
+   const popup = document.querySelector(".popup");
+   overlay.classList.add("active");
+   overlay.style.opacity = 1;
+   popup.style.scale = 1;
+
+   bodymovin.loadAnimation({
+      container: document.querySelector(".check-mark"),
+      path: "./Assets/Animations/error.json",
+      render: "svg",
+      loop: false,
+      autoplay: true,
+      name: "Checking",
+   });
+
+   overlay.addEventListener("click", () => {
+      overlay.classList.remove("active");
+      overlay.style.opacity = 0;
+      popup.style.scale = 0;
+      popup.querySelector(".check-mark").innerHTML = "";
+   });
+}
