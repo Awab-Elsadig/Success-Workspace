@@ -23,18 +23,11 @@
    }
 
    .button {
-      color: var(--color-black);
       border: 2px solid var(--color-black);
-      .button__icon {
-         color: var(--color-black);
-      }
-      &.booking__button,
-      &.membership__button,
-      &.contact__button {
-         background-image: url(../Assets/Backgrounds/BG-1.jpeg);
-         background-repeat: no-repeat;
-         background-size: cover;
-      }
+      background-image: url(../Assets/Backgrounds/BG-1.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--color-black-l1);
    }
 }
 

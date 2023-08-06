@@ -65,13 +65,13 @@ ${message}`;
       })
          .then((response) => {
             if (response.ok) {
-               showPopup();
+               showPopup(1);
             } else {
-               alert("Failed to send message. Please try again later.");
+               showPopup(2);
             }
          })
          .catch((error) => {
-            alert("An error occurred while sending the message. Please try again later.");
+            showPopup(3);
          });
    }
 
@@ -81,26 +81,39 @@ ${message}`;
    document.querySelector("form .message__input").value = "";
 });
 
-function showPopup(message) {
-   const overlay = document.querySelector(".overlay");
-   const popup = document.querySelector(".popup");
-   overlay.classList.add("active");
-   overlay.style.opacity = 1;
-   popup.style.scale = 1;
+function showPopup(isValid) {
+   let overlay = document.querySelector(".overlay");
+   let popup = document.querySelector(".popup");
+   overlay.classList.add("open");
+   popup.classList.add("open");
+
+   let path;
+   switch (isValid) {
+      case 1:
+         path = "../Assets/Animations/check.json";
+         break;
+      default:
+         path = "../Assets/Animations/error.json";
+   }
 
    bodymovin.loadAnimation({
-      container: document.querySelector(".check-mark"),
-      path: "./Assets/Animations/error.json",
+      container: document.querySelector(".mark"),
+      path: path,
       render: "svg",
       loop: false,
       autoplay: true,
       name: "Checking",
    });
 
-   overlay.addEventListener("click", () => {
-      overlay.classList.remove("active");
-      overlay.style.opacity = 0;
-      popup.style.scale = 0;
-      popup.querySelector(".check-mark").innerHTML = "";
-   });
+   overlay.onclick = closePopup();
+}
+
+function closePopup() {
+   const overlay = document.querySelector(".overlay");
+   const popup = document.querySelector(".popup");
+   const mark = document.querySelector(".mark");
+
+   overlay.classList.remove("open");
+   popup.classList.remove("open");
+   mark.textContent = "";
 }

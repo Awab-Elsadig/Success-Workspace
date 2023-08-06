@@ -1,8 +1,21 @@
 :root {
-   // Colors
+   // ############# Colors ###############
+   // White #####
    --color-white: #fff;
+   --color-white-l1: #eee;
+   --color-white-l2: #ddd;
+   --color-white-l3: #ccc;
+
+   // Black #####
    --color-black: #000;
-   --color-light: hsl(0, 0%, 90%);
+   --color-black-l1: #111;
+   --color-black-l2: #222;
+   --color-black-l3: #333;
+   // Shadows
+   --color-black-s1: #0009;
+   --color-black-s2: #0006;
+   --color-black-s3: #0003;
+
    --color-blue: #05bfdb;
    --color-light-light-blue: #e9f8f9;
    --color-light-blue: #99dbf5;
@@ -17,6 +30,10 @@
    --color-light-magenta: #ffb3ff;
    --color-dark-magenta: #8b008b;
 
-   // Transitions
-   --transition: all 300ms ease;
+   // ############# Transitions ###############
+   --transition-vfast: 200ms;
+   --transition-fast: 400ms;
+   --transition-medium: 600ms;
+   --transition-slow: 800ms;
+   --transition-vslow: 1s;
 }
