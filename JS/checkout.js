@@ -15,7 +15,7 @@ function displayBookedSeats(bookedSeatsData, bookedSeatsContainer) {
       seatElement.classList.add("bookedSeat");
       bookedSeatsContainer.append(seatElement);
    });
-   const priceElement = document.createElement("h3");
+   const priceElement = document.querySelector("price");
    priceElement.textContent = `\nTotal: ${bookedSeatsData.length * seatPrice} EGP \n`;
    priceElement.classList.add("total__price");
    bookedSeatsContainer.append(priceElement);
@@ -50,8 +50,10 @@ Selected:
 ${selected}
 Booking ID: #${bookingID}`;
 
-   sendTelegram(text);
-   // showPopup(text);
+   document.querySelector(".close-button").addEventListener("click", () => closePopup());
+
+   // sendTelegram(text);
+   showPopup(text, true);
 
    theForm.reset();
 });
@@ -86,16 +88,34 @@ function sendTelegram(text) {
       });
 }
 
-function showPopup(text) {
-   const thePopup = document.createElement("div");
-   thePopup.classList.add("thePopup");
-   const popupBox = document.createElement("div");
-   popupBox.classList.add("popupBox");
-   const info = document.createElement("span");
-   info.classList.add("popupInfo");
-   info.innerText = text;
+function showPopup(text, isValid) {
+   const overlay = document.querySelector(".overlay");
+   let popup;
+   if (isValid) {
+      popup = document.querySelector(".popup.good");
+      popup.querySelector(".info").textContent = text;
+   } else {
+      popup = document.querySelector(".popup.bad");
+   }
+   overlay.classList.add("open");
+   popup.classList.add("open");
 
-   popupBox.append(info);
-   thePopup.appendChild(popupBox);
-   document.querySelector(".checkout__container").appendChild(thePopup);
+   bodymovin.loadAnimation({
+      container: isValid ? document.querySelector(".check-mark") : document.querySelector(".error-mark"),
+      path: isValid ? "../Assets/Animations/check.json" : "../Assets/Animations/error.json",
+      render: "svg",
+      loop: false,
+      autoplay: true,
+      name: "Checking",
+   });
+}
+
+function closePopup() {
+   const overlay = document.querySelector(".overlay");
+   const popup = document.querySelector(".popup");
+   const mark = document.querySelector(".mark");
+
+   overlay.classList.remove("open");
+   popup.classList.remove("open");
+   mark.textContent = "";
 }

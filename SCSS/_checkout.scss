@@ -1,5 +1,5 @@
-@use "./theIncludes/mixins";
-@use "./theIncludes/variables";
+@use "./mixins";
+@use "./variables";
 
 // ================ All Devices =============================
 .checkout__container {
@@ -41,7 +41,14 @@
       position: fixed;
       inset: 0;
       background: #0008;
-      
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.8s;
+
+      &.open {
+         pointer-events: all;
+         opacity: 1;
+      }
    }
    .popup {
       position: fixed;
@@ -49,19 +56,48 @@
       left: 50%;
       translate: -50% -50%;
       display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 70vw;
-      min-height: 30rem;
+      min-height: 20rem;
       background: beige;
-      border: 0.4rem solid dodgerblue;
       border-radius: 1rem;
       padding: 1rem;
       font-size: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
 
-      .popupInfo {
-         display: flex;
-         flex-direction: column;
-         width: 100%;
-         text-align: center;
+      .mark {
+         height: 10rem;
+      }
+
+      &.good {
+         border: 0.4rem solid dodgerblue;
+         .bottom {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+
+            button {
+               width: 100%;
+               height: 5rem;
+               margin-top: 1rem;
+               background: dodgerblue;
+               color: #fff;
+               font-size: 2rem;
+               cursor: pointer;
+            }
+         }
+      }
+      &.bad {
+         border: 0.4rem solid coral;
+      }
+      &.open {
+         pointer-events: all;
+         opacity: 1;
       }
    }
 }

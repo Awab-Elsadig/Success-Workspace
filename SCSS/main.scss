@@ -1,5 +1,5 @@
-@use "./theIncludes/mixins";
-@use "./theIncludes/variables";
+@use "./mixins";
+@use "./variables";
 @use "./home";
 @use "./booking";
 @use "./membership";
@@ -16,7 +16,7 @@
    border: none;
    outline: none;
    box-sizing: border-box;
-   -webkit-tap-highlight-color: transparent;
+   -webkit-tap-highlight-color: #0002;
 }
 
 body {
@@ -42,6 +42,12 @@ html {
    min-height: 100dvh;
    padding: 0 1.5rem;
    font-family: "Rubik", sans-serif;
+}
+
+.clickable {
+   &:active {
+      scale: 0.96;
+   }
 }
 
 header {
@@ -89,9 +95,6 @@ footer {
 
    &.back__button {
       text-shadow: #0008 0.2em 0.2em;
-   }
-   &:active {
-      scale: 0.96;
    }
 }
 

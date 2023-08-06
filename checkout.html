@@ -4,7 +4,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" type="image/x-icon" href="./Assets/Page_Icons/contact.png" />
-      <title>Contact</title>
+      <title>Checkout</title>
 
       <!-- Google Fonts -->
       <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
@@ -14,6 +14,9 @@
 
       <!-- FontAwesome -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+
+      <!-- Body Movin Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
    </head>
    <body>
       <div class="container checkout__container">
@@ -30,15 +33,28 @@
                <h3>Phone</h3>
                <input name="phone" type="text" placeholder="eg. 01111111111" class="phone__input" />
                <h3>Seats</h3>
-               <div class="selected"></div>
-               <button type="submit" class="submit__button">Submit</button>
+               <div class="selected">
+                  <div class="price"></div>
+               </div>
+               <button type="submit" class="submit__button clickable">Submit</button>
             </form>
          </main>
          <div class="overlay"></div>
-         <div class="popup">
-            <div class="check-mark"></div>
-            <h3>Hello</h3>
-            
+         <div class="popup good">
+            <div class="mark check-mark"></div>
+            <h2>Done!</h2>
+            <p>Thanks for ordering</p>
+            <span class="info"></span>
+            <div class="bottom">
+               <button class="clickable">Copy</button>
+               <button class="close-button clickable">OK</button>
+            </div>
+         </div>
+         <div class="popup bad">
+            <div class="mark error-mark"></div>
+            <h2>حدث خطأ</h2>
+            <p>الرجاء المحاولة لاحقاً</p>
+            <span class="info"></span>
          </div>
       </div>
 
