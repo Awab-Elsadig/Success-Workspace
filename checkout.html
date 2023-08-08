@@ -31,19 +31,16 @@
                <h3>Name</h3>
                <input name="name" type="text" placeholder="eg. Ahmed Salah" class="name__input" />
                <h3>Phone</h3>
-               <input name="phone" type="text" placeholder="eg. 01111111111" class="phone__input" />
+               <input name="phone" type="tel" placeholder="eg. 01111111111" class="phone__input" />
                <h3>Seats</h3>
-               <div class="selected">
-                  <div class="price"></div>
-               </div>
+               <div class="selected"></div>
                <button type="submit" class="submit__button clickable">Submit</button>
             </form>
          </main>
          <div class="overlay"></div>
          <div class="popup good">
             <div class="mark check-mark"></div>
-            <h2>Done!</h2>
-            <p>Thanks for ordering</p>
+            <h2 class="title"></h2>
             <span class="info"></span>
             <div class="bottom">
                <button class="clickable">Copy</button>
@@ -52,12 +49,11 @@
          </div>
          <div class="popup bad">
             <div class="mark error-mark"></div>
-            <h2>حدث خطأ</h2>
-            <p>الرجاء المحاولة لاحقاً</p>
+            <h2 class="title"></h2>
             <span class="info"></span>
          </div>
       </div>
 
-      <script src="./JS/checkout.js"></script>
+      <script src="./JS/temp.js"></script>
    </body>
 </html>

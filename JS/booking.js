@@ -2,24 +2,6 @@ let SEAT_PRICE = 30;
 let rooms = document.querySelectorAll(".room");
 let seats = document.querySelectorAll(".seat");
 
-// Function to show popup
-function showPopup() {
-   let thePopup = document.querySelector(".thePopup");
-   let understoodButton = document.querySelector(".understoodButton");
-   thePopup.style.display = "grid";
-   setTimeout(() => {
-      thePopup.style.opacity = 1;
-   }, 500);
-
-   // Button to close popup
-   understoodButton.addEventListener("click", () => {
-      thePopup.style.opacity = 0;
-      setTimeout(() => {
-         thePopup.style.display = "none";
-      }, 800);
-   });
-}
-
 // Functoin to check each room click
 function initRooms() {
    rooms.forEach((room) => {
@@ -44,11 +26,12 @@ function initSeats() {
       });
    });
 }
+// RETURN ^^^^^^^^^^^^^^^^^^^^^^^
 
-// Function to check invoice click
 function initInvoice() {
    let invoice = document.querySelector(".invoice");
    let selection = document.querySelector(".selection");
+
    invoice.addEventListener("click", () => {
       invoice.classList.toggle("expanded");
       if (invoice.classList.contains("expanded")) {
@@ -59,30 +42,15 @@ function initInvoice() {
    });
 }
 
-// Function to expand or collapse a room
+// Function to toggle room
 function toggleRoom(room) {
-   let currentRoom = room;
-   rooms.forEach((otherRoom) => {
-      if (otherRoom !== currentRoom) {
-         otherRoom.classList.remove("expanded");
-         otherRoom.querySelector(".seats").classList.add("hidden");
-      }
-   });
-
-   // Toggle the expanded and hidden classes for room and seatsElement
-   currentRoom.classList.toggle("expanded");
-   let seatsElement = currentRoom.querySelector(".seats");
-   seatsElement.classList.toggle("hidden");
-
-   // Expand the current room
-   rooms.forEach((room) => {
-      const seatsElement = room.querySelector(".seats");
-      if (room.classList.contains("expanded")) {
-         seatsElement.style.maxHeight = `${seatsElement.scrollHeight}px`;
-      } else {
-         seatsElement.style.maxHeight = 0;
-      }
-   });
+   let seats = room.querySelector(".seats");
+   room.classList.toggle("expanded");
+   if (room.classList.contains("expanded")) {
+      seats.style.maxHeight = `${seats.scrollHeight}px`;
+   } else {
+      seats.style.maxHeight = 0;
+   }
 }
 
 // Function to change seat status to booked and update selction
@@ -90,6 +58,7 @@ function toggleSeat(seat) {
    if (!seat.classList.contains("reserved")) {
       seat.classList.toggle("booked");
       updateSelection();
+      document.querySelector(".selection").style.maxHeight = 0;
    }
 }
 
@@ -103,15 +72,16 @@ function updateSelection() {
    let sessionSeats = [];
    bookedSeats.forEach((seat) => {
       let currentSeat = {
-         seatNumber: seat.textContent,
-         room: seat.parentElement.parentElement.querySelector("h2").textContent,
+         seatNumber: `Seat ${seat.getAttribute("data-set-id")}`,
+         room: `Room ${seat.getAttribute("inRoom")}`,
       };
-      sessionSeats.push(currentSeat);
+      sessionSeats.push(currentSeat); // Add to Session Storage
       let theP = document.createElement("p");
-      theP.textContent = `${currentSeat.room} - ${currentSeat.seatNumber}\n`;
+      theP.textContent = `${currentSeat.room} - ${currentSeat.seatNumber}`;
       selectedSeats.append(theP);
    });
    sessionStorage.setItem("bookedSeats", JSON.stringify(sessionSeats));
+   sessionStorage.setItem("bookingPrice", `${bookedSeats.length * SEAT_PRICE} EGP`);
 
    // Update Price and Show Checkout Button
    document.querySelector(".total__price span").textContent = `${bookedSeats.length * SEAT_PRICE} EGP`;
@@ -123,11 +93,8 @@ function updateSelection() {
 }
 
 // Initialize the page
-function initBookingPage() {
-   showPopup();
+window.onload = () => {
    initRooms();
    initSeats();
    initInvoice();
-}
-
-window.addEventListener("click", initBookingPage());
+};

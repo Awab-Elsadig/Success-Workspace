@@ -28,7 +28,7 @@ body {
    overflow-x: hidden;
    display: flex;
    flex-direction: column;
-   transition: var(--transition);
+   transition: var(--transition-fast);
 }
 
 a {
@@ -180,9 +180,6 @@ form {
       width: 10rem;
       margin-bottom: 1rem;
    }
-   button {
-
-   }
 
    &.open {
       scale: 1;
@@ -218,15 +215,5 @@ form {
    }
    footer {
       height: 15dvw;
-   }
-
-   /* ****** Button ********** */
-   .button {
-      width: 50vw;
-   }
-
-   /* ****** Form ********** */
-   form {
-      width: 50vw;
    }
 }

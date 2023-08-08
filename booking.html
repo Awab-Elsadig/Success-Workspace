@@ -28,62 +28,61 @@
 
          <!-- ========== Main Section =============== -->
          <main>
-            <div class="thePopup">
-               <div class="popupBox">
-                  <h2>التعليمات</h2>
-                  <ul>
-                     <li>مدة الحجز يوم كامل</li>
-                     <hr />
-                     <li>حد اقصى 5 كراسي للطلب</li>
-                     <hr />
-                     <li>يتم الغاء الحجز بعد نصف ساعة من الطلب في حال عدم الحضور</li>
-                     <hr />
-                     <li>هناك مشروب مجاني لكل فرد</li>
-                  </ul>
-                  <div class="bottom"><button class="understoodButton" type="button">اوافق</button></div>
-               </div>
-            </div>
+            <div class="overlay"></div>
+            <!-- <div class="popup">
+               <h2>التعليمات</h2>
+               <ul>
+                  <li>مدة الحجز يوم كامل</li>
+                  <hr />
+                  <li>حد اقصى 5 كراسي للطلب</li>
+                  <hr />
+                  <li>يتم الغاء الحجز بعد نصف ساعة من الطلب في حال عدم الحضور</li>
+                  <hr />
+                  <li>هناك مشروب مجاني لكل فرد</li>
+               </ul>
+               <div class="bottom"><button class="understoodButton" type="button">اوافق</button></div>
+            </div> -->
             <div class="room button">
                <h2>Room 1</h2>
                <div class="seats hidden">
-                  <span class="seat" data-set-id="1">Seat 1</span>
-                  <span class="seat reserved" data-set-id="2">Seat 2</span>
-                  <span class="seat reserved" data-set-id="3">Seat 3</span>
-                  <span class="seat" data-set-id="4">Seat 4</span>
-                  <span class="seat reserved" data-set-id="5">Seat 5</span>
-                  <span class="seat" data-set-id="6">Seat 6</span>
-                  <span class="seat reserved" data-set-id="7">Seat 7</span>
+                  <span class="seat" data-set-id="1" inRoom="1">Seat 1</span>
+                  <span class="seat reserved" data-set-id="2" inRoom="2">Seat 2</span>
+                  <span class="seat reserved" data-set-id="3" inRoom="3">Seat 3</span>
+                  <span class="seat" data-set-id="4" inRoom="4">Seat 4</span>
+                  <span class="seat reserved" data-set-id="5" inRoom="5">Seat 5</span>
+                  <span class="seat" data-set-id="6" inRoom="6">Seat 6</span>
+                  <span class="seat reserved" data-set-id="7" inRoom="7">Seat 7</span>
                </div>
             </div>
 
             <div class="room button">
                <h2>Room 2</h2>
                <div class="seats hidden">
-                  <span class="seat" data-set-id="8">Seat 8</span>
-                  <span class="seat" data-set-id="9">Seat 9</span>
-                  <span class="seat reserved" data-set-id="10">Seat 10</span>
-                  <span class="seat" data-set-id="11">Seat 11</span>
-                  <span class="seat reserved" data-set-id="12">Seat 12</span>
-                  <span class="seat" data-set-id="13">Seat 13</span>
-                  <span class="seat" data-set-id="14">Seat 14</span>
+                  <span class="seat" data-set-id="8" inRoom="8">Seat 8</span>
+                  <span class="seat" data-set-id="9" inRoom="9">Seat 9</span>
+                  <span class="seat reserved" data-set-id="10" inRoom="10">Seat 10</span>
+                  <span class="seat" data-set-id="11" inRoom="11">Seat 11</span>
+                  <span class="seat reserved" data-set-id="12" inRoom="12">Seat 12</span>
+                  <span class="seat" data-set-id="13" inRoom="13">Seat 13</span>
+                  <span class="seat" data-set-id="14" inRoom="14">Seat 14</span>
                </div>
             </div>
 
             <div class="room button">
                <h2>Room 3</h2>
                <div class="seats hidden">
-                  <span class="seat" data-set-id="15">Seat 15</span>
-                  <span class="seat" data-set-id="16">Seat 16</span>
-                  <span class="seat" data-set-id="17">Seat 17</span>
-                  <span class="seat" data-set-id="18">Seat 18</span>
-                  <span class="seat reserved" data-set-id="19">Seat 19</span>
-                  <span class="seat" data-set-id="20">Seat 20</span>
+                  <span class="seat" data-set-id="15" inRoom="15">Seat 15</span>
+                  <span class="seat" data-set-id="16" inRoom="16">Seat 16</span>
+                  <span class="seat" data-set-id="17" inRoom="17">Seat 17</span>
+                  <span class="seat" data-set-id="18" inRoom="18">Seat 18</span>
+                  <span class="seat reserved" data-set-id="19" inRoom="19">Seat 19</span>
+                  <span class="seat" data-set-id="20" inRoom="20">Seat 20</span>
                </div>
             </div>
          </main>
          <!-- ========== Bottom Section =============== -->
          <footer>
-            <div class="invoice">
+            <div class="invoice" id="invoice">
                <span class="title">
                   <h2>Selection</h2>
                   <i class="fa-solid fa-caret-down down-arrow left"></i>

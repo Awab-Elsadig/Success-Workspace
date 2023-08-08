@@ -30,7 +30,7 @@
             .bookedSeat {
                font-size: 2vh;
             }
-            .total__price {
+            .price {
                margin-top: 2vh;
                font-size: 3vh;
             }
@@ -64,16 +64,15 @@
       border-radius: 1rem;
       padding: 1rem;
       font-size: 1.5rem;
-      opacity: 0;
+      scale: 0;
       pointer-events: none;
-      transition: opacity 0.8s cubic-bezier(0.47, 0, 0.745, 0.715);
+      transition: scale 0.8s;
 
       .mark {
          height: 10rem;
       }
 
       &.good {
-         border: 0.4rem solid dodgerblue;
          .bottom {
             display: flex;
             flex: 1;
@@ -92,12 +91,9 @@
             }
          }
       }
-      &.bad {
-         border: 0.4rem solid coral;
-      }
       &.open {
+         scale: 1;
          pointer-events: all;
-         opacity: 1;
       }
    }
 }
