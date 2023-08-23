@@ -30,11 +30,7 @@ function initSeats() {
 
 function initInvoice() {
    let invoice = document.querySelector(".invoice");
-<<<<<<< HEAD
-   let selection = document.querySelector(".selection");
-=======
    let selection = document.querySelector(".invoice__selected");
->>>>>>> 2380477 (All files)
 
    invoice.addEventListener("click", () => {
       invoice.classList.toggle("expanded");
@@ -62,21 +58,13 @@ function toggleSeat(seat) {
    if (!seat.classList.contains("reserved")) {
       seat.classList.toggle("booked");
       updateSelection();
-<<<<<<< HEAD
-      document.querySelector(".selection").style.maxHeight = 0;
-=======
       document.querySelector(".invoice__selected").style.maxHeight = 0;
->>>>>>> 2380477 (All files)
    }
 }
 
 // Function to update the selected seats display
 function updateSelection() {
-<<<<<<< HEAD
-   let selectedSeats = document.querySelector(".selectedSeats");
-=======
    let selectedSeats = document.querySelector(".selected__seats");
->>>>>>> 2380477 (All files)
    let bookedSeats = document.querySelectorAll(".booked");
    selectedSeats.textContent = "";
 
@@ -84,17 +72,10 @@ function updateSelection() {
    let sessionSeats = [];
    bookedSeats.forEach((seat) => {
       let currentSeat = {
-<<<<<<< HEAD
-         seatNumber: `Seat ${seat.getAttribute("data-set-id")}`,
-         room: `Room ${seat.getAttribute("inRoom")}`,
-      };
-      sessionSeats.push(currentSeat); // Add to Session Storage
-=======
          seatNumber: `Seat ${seat.getAttribute("seatNum")}`,
          room: `Room ${seat.getAttribute("inRoom")}`,
       };
       sessionSeats.push(currentSeat);
->>>>>>> 2380477 (All files)
       let theP = document.createElement("p");
       theP.textContent = `${currentSeat.room} - ${currentSeat.seatNumber}`;
       selectedSeats.append(theP);
@@ -103,20 +84,12 @@ function updateSelection() {
    sessionStorage.setItem("bookingPrice", `${bookedSeats.length * SEAT_PRICE} EGP`);
 
    // Update Price and Show Checkout Button
-<<<<<<< HEAD
-   document.querySelector(".total__price span").textContent = `${bookedSeats.length * SEAT_PRICE} EGP`;
-   if (bookedSeats.length > 0) {
-      document.querySelector(".checkout__button").style.display = "flex";
-   } else {
-      document.querySelector(".checkout__button").style.display = "none";
-=======
    console.log(document.querySelector(".invoice"));
    document.querySelector(".invoice__price span").textContent = `${bookedSeats.length * SEAT_PRICE} EGP`;
    if (bookedSeats.length > 0) {
       document.querySelector(".checkout-button").style.display = "block";
    } else {
       document.querySelector(".checkout-button").style.display = "none";
->>>>>>> 2380477 (All files)
    }
 }
 
@@ -125,8 +98,4 @@ window.onload = () => {
    initRooms();
    initSeats();
    initInvoice();
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> 2380477 (All files)
