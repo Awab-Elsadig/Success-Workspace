@@ -1,81 +1,3 @@
-<<<<<<< HEAD
-@use "./mixins";
-@use "./variables";
-
-// ================ All Devices =============================
-.membership__container {
-   @include mixins.center-flex;
-   background-image: url(../Assets/Backgrounds/BG-2.jpeg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   flex-direction: column;
-
-   .button {
-      &.back__button {
-         background: #7ebeac;
-      }
-
-      &.weekly__button,
-      &.monthly__button {
-         height: 15rem;
-         margin-bottom: 2rem;
-         text-shadow: #0008 0.25em 0.25em;
-
-         .button__text {
-            right: 0;
-            top: 0;
-            transform: none;
-            height: 100%;
-            width: 70%;
-
-            .type {
-               position: absolute;
-               right: 0;
-               top: 0;
-               font-size: 2rem;
-               margin: 2rem;
-               text-align: right;
-            }
-            .price {
-               position: absolute;
-               right: 0;
-               bottom: 0;
-               width: max-content;
-               font-size: 4rem;
-               margin: 2rem;
-            }
-         }
-
-         .button__icon {
-            top: 0;
-            left: 0;
-            transform: none;
-            margin: 2rem 0 0 2rem;
-         }
-      }
-
-      &.weekly__button {
-         background: var(--color-mint);
-      }
-      &.monthly__button {
-         background: var(--color-magenta);
-      }
-   }
-}
-
-// ================ Medium Devices =============================
-@media (min-width: 768px) {
-}
-// ================ Large Devices =============================
-@media (min-width: 992px) {
-}
-// ================ Desktop Devices =============================
-@media (min-width: 1200px) {
-}
-
-// ================ Landscape Orientation ========================
-@media (max-height: 767px) and (orientation: landscape) {
-=======
 @forward "variables";
 
 .membership--page {
@@ -141,5 +63,4 @@
    left: 1rem;
 
    font-size: 3rem;
->>>>>>> 2380477 (All files)
 }
