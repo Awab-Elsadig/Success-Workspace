@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Monthly Membership</title>
+      <link rel="shortcut icon" href="Assets/Page_Icons/crown.ico" type="image/x-icon" />
+
+      <!-- CSS Stylesheet -->
+      <link rel="stylesheet" href="./dist/styles.css" />
+      <!-- FontAwesome Stylesheet -->
+      <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- JavaScript File -->
+      <script src="JS/monthly.js" defer></script>
+      <!-- BodyMovin Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </head>
+   <body class="monthly--page">
+      <header class="monthly__header">
+         <a href="membership.html" class="button monthly__back back-button clickable">العودة<i class="fas fa-arrow-left"></i></a>
+      </header>
+      <main class="monthly__main">
+         <form action="" id="form" class="monthly__form">
+            <label>
+               <h3>Name</h3>
+               <input type="text" placeholder="eg. Ahmed Mohamed" />
+            </label>
+            <label>
+               <h3>Phone</h3>
+               <input type="text" placeholder="eg. 01234567890" />
+            </label>
+            <button type="submit" class="clickable">Submit</button>
+         </form>
+      </main>
+      <div class="overlay"></div>
+      <div class="popup">
+         <div class="mark"></div>
+         <div class="title">
+            <h3 class="title__main"></h3>
+            <h4 class="title__message"></h4>
+         </div>
+         <button type="button" class="close--button clickable">Close</button>
+      </div>
+   </body>
+</html>

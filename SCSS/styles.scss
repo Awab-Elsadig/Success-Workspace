@@ -1,0 +1,75 @@
+@forward "variables";
+@forward "shared";
+@forward "main";
+@forward "booking";
+@forward "membership";
+@forward "weekly";
+@forward "monthly";
+@forward "contact";
+@forward "checkout";
+
+/* ########### Global Rules Start ########### */
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   color: inherit;
+   list-style: none;
+   outline: none;
+   border: none;
+   font: inherit;
+   -webkit-tap-highlight-color: transparent;
+}
+/* ########### Global Rules End ########### */
+/* ########### Fonts Start ########### */
+@font-face {
+   font-family: "Great Vibes";
+   src: url(../Fonts/GreatVibes-Regular.ttf);
+}
+@font-face {
+   font-family: "Rubik";
+   src: url(../Fonts/Rubik-VariableFont_wght.ttf);
+}
+/* ########### Fonts End ########### */
+
+html {
+   scroll-behavior: smooth;
+   font-size: 62.5%;
+}
+body {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   font-family: Rubik;
+   direction: rtl;
+}
+
+header,
+main,
+footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+header,
+footer {
+   height: 15dvh;
+
+   @media (max-height: 767px) and (orientation: landscape) {
+      height: 15dvw;
+   }
+}
+
+main {
+   height: 85dvh;
+
+   @media (max-height: 767px) and (orientation: landscape) {
+      height: 85dvw;
+   }
+}

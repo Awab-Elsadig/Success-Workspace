@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
       <link rel="icon" type="image/x-icon" href="./Assets/Page_Icons/contact.png" />
       <title>Checkout</title>
 
@@ -55,5 +56,68 @@
       </div>
 
       <script src="./JS/temp.js"></script>
+=======
+      <title>Checkout</title>
+      <link rel="shortcut icon" href="Assets/Page_Icons/checkout.ico" type="image/x-icon" />
+
+      <!-- CSS Stylesheet -->
+      <link rel="stylesheet" href="./dist/styles.css" />
+      <!-- FontAwesome Stylesheet -->
+      <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- JavaScript File -->
+      <script src="JS/checkout.js" defer></script>
+      <!-- BodyMovin Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </head>
+   <body class="checkout--page">
+      <header class="checkout__header">
+         <a href="booking.html" class="button checkout__back back-button">العودة<i class="fas fa-arrow-left"></i></a>
+      </header>
+      <main class="weekly__main">
+         <form action="" id="form" class="checkout__form">
+            <label>
+               <h3>Name</h3>
+               <input type="text" name="name" placeholder="eg. Ahmed Mohamed" />
+            </label>
+            <label>
+               <h3>Phone</h3>
+               <input type="text" name="phone" placeholder="eg. 01234567890" />
+            </label>
+            <h3>Seats</h3>
+            <div class="selected">
+               <div class="selected__price"></div>
+            </div>
+            <button type="submit" class="clickable">Submit</button>
+         </form>
+      </main>
+      <div class="overlay"></div>
+      <div class="popup">
+         <div class="mark"></div>
+         <div class="title">
+            <h3 class="title__main"></h3>
+            <h4 class="title__message"></h4>
+         </div>
+         <div class="popup__seats"></div>
+         <h2 class="popup__price"></h2>
+         <h2 class="popup__ID"></h2>
+         <button type="button" class="copy--button clickable">Copy ID</button>
+         <button type="button" class="close--button clickable">Close</button>
+      </div>
+      <div class="popup info--popup">
+         <div class="title">
+            <h3 class="title__main"></h3>
+            <h4 class="title__message"></h4>
+         </div>
+         <hr />
+         <div class="instructions">
+            <ol>
+               <li>الطلب سيلغى خلال نصف ساعة في حال عدم الحضور.</li>
+               <li>سيتم ارسال رسالة على الواتساب لتأكيد الحجز .</li>
+               <li class="special">هناك مشروب مجاني لكل فرد.</li>
+            </ol>
+            <button type="button" class="close--button clickable">Close</button>
+         </div>
+      </div>
+>>>>>>> 2380477 (All files)
    </body>
 </html>

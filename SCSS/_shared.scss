@@ -1,0 +1,150 @@
+// Buttons
+.button {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   width: min(70vw, 50rem);
+   height: 7rem;
+
+   padding: 2rem;
+
+   background: var(--clr-white);
+
+   font-size: 3.5rem;
+   font-weight: 600;
+
+   border-radius: 1rem;
+   box-shadow: inset 0 0 0.4rem var(--clr-black-4);
+}
+
+.back-button {
+   text-shadow: 0.2rem 0.2rem 0 var(--clr-black-3);
+}
+
+.clickable:active {
+   scale: 0.96;
+}
+
+// Forms
+
+form {
+   width: min(70vw, 50rem);
+
+   padding: 1rem;
+
+   border-radius: 1rem;
+   box-shadow: 0.5rem 0.5rem 0 var(--clr-black-op7);
+   direction: ltr;
+
+   h3 {
+      color: #fff;
+
+      margin: 0 0.5rem 1rem;
+
+      font-size: 2rem;
+      font-weight: 700;
+
+      text-shadow: 0.2rem 0.2rem 0 var(--clr-black);
+   }
+   input,
+   textarea {
+      width: 100%;
+      height: 5rem;
+
+      padding: 1rem;
+      margin-bottom: 1rem;
+
+      font-size: 2rem;
+
+      box-shadow: 0.3rem 0.3rem 0 var(--clr-black-op8);
+      border-radius: 1rem;
+      transition: box-shadow var(--transition-fast);
+
+      &:focus {
+         box-shadow: 0.3rem 0.3rem 0 var(--clr-black-op8), inset 0 0 0 0.4rem dodgerblue;
+      }
+   }
+   textarea {
+      height: 12rem;
+      resize: vertical;
+   }
+
+   button {
+      width: 100%;
+      height: 5rem;
+
+      margin-top: 3rem;
+
+      font-size: 2.5rem;
+      font-weight: 700;
+
+      background-color: dodgerblue;
+      color: var(--clr-white);
+
+      border-radius: 0.7rem;
+      box-shadow: inset 0 0 0 0.2rem darkblue;
+   }
+}
+
+// Popup
+.overlay {
+   position: absolute;
+   inset: 0;
+
+   background-color: var(--clr-black-op7);
+
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity var(--transition-fast);
+
+   &.open {
+      opacity: 1;
+      pointer-events: all;
+   }
+}
+
+.popup {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   direction: ltr;
+
+   width: min(70vw, 50rem);
+
+   padding: 1rem;
+
+   background-color: beige;
+
+   border-radius: 1rem;
+   box-shadow: 0.4rem 0.4rem;
+   pointer-events: none;
+   scale: 0;
+   text-align: center;
+   transition: scale var(--transition-fast);
+
+   &.open {
+      scale: 1;
+      pointer-events: all;
+   }
+}
+
+.mark {
+   height: 10rem;
+}
+
+.title__main {
+   font-size: 3rem;
+   font-weight: 600;
+}
+
+.title__message {
+   font-size: 2rem;
+   font-weight: 500;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "./mixins";
 @use "./variables";
 
@@ -74,4 +75,71 @@
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
+=======
+@forward "variables";
+
+.membership--page {
+   background: url(../Assets/Backgrounds/BG-2.jpeg);
+   background-size: cover;
+}
+
+.membership__back {
+   background: var(--clr-membership-dark);
+   color: var(--clr-white-e);
+}
+
+.weekly-button,
+.monthly-button {
+   position: relative;
+
+   width: min(70vw, 50rem);
+   height: 15rem;
+
+   margin-bottom: 2rem;
+   padding: 1rem;
+
+   color: var(--clr-white);
+
+   border-radius: 1rem;
+   box-shadow: inset 0 0 0.5rem var(--clr-black-3);
+}
+
+.weekly-button {
+   background: var(--clr-weekly);
+}
+
+.monthly-button {
+   background: var(--clr-monthly);
+}
+
+.weekly-text,
+.monthly-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   height: 100%;
+   width: 80%;
+
+   text-shadow: 0.2rem 0.2rem 0 var(--clr-black-2);
+}
+
+.membership-type {
+   font-size: 2.8rem;
+   font-weight: 600;
+}
+
+.membership-price {
+   font-weight: 700;
+   font-size: 3.5rem;
+}
+
+.weekly-icon,
+.monthly-icon {
+   position: absolute;
+   top: 1rem;
+   left: 1rem;
+
+   font-size: 3rem;
+>>>>>>> 2380477 (All files)
 }

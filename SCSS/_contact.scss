@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "./mixins";
 @use "./variables";
 
@@ -31,4 +32,24 @@
 
 // ================ Landscape Orientation ========================
 @media (max-height: 767px) and (orientation: landscape) {
+=======
+@forward "variables";
+
+.contact--page {
+   background: url(../Assets/Backgrounds/mint.jpg);
+   background-size: cover;
+}
+
+.contact__main {
+   // height: 85dvh;
+}
+
+.contact__back {
+   background: var(--clr-contact);
+   color: var(--clr-white-e);
+}
+
+.contact__form {
+   background: var(--clr-contact);
+>>>>>>> 2380477 (All files)
 }

@@ -1,0 +1,17 @@
+.weekly--page {
+   background: url(../Assets/Backgrounds/weekly-bg.jpg);
+   background-size: cover;
+}
+
+.weekly__main {
+   height: 85dvh;
+}
+
+.weekly__back {
+   background-color: var(--clr-weekly-dark);
+   color: var(--clr-white);
+}
+
+.weekly__form {
+   background: var(--clr-weekly-light);
+}

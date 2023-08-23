@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
       <title>Home</title>
       <link rel="icon" type="image/x-icon" href="./Assets/Page_Icons/home.png" />
 
@@ -98,5 +99,71 @@
       </div>
 
       <script src="./JS/booking.js"></script>
+=======
+      <title>Booking</title>
+      <link rel="shortcut icon" href="Assets/Page_Icons/booking.ico" type="image/x-icon" />
+
+      <!-- CSS Stylesheet -->
+      <link rel="stylesheet" href="./dist/styles.css" />
+      <!-- FontAwesome Stylesheet -->
+      <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- JavaScript File -->
+      <script src="JS/booking.js" defer></script>
+   </head>
+   <body class="booking--page">
+      <header class="booking__header">
+         <a href="index.html" class="button booking__back back-button clickable">العودة<i class="fas fa-arrow-left"></i></a>
+      </header>
+      <main class="booking__main">
+         <div class="room">
+            <h3>Room 1</h3>
+            <div class="seats">
+               <div class="seat clickable" seatNum="1" inRoom="1">Seat 1</div>
+               <div class="seat clickable" seatNum="2" inRoom="1">Seat 2</div>
+               <div class="seat reserved clickable" seatNum="3" inRoom="1">Seat 3</div>
+               <div class="seat clickable" seatNum="4" inRoom="1">Seat 4</div>
+               <div class="seat clickable" seatNum="5" inRoom="1">Seat 5</div>
+               <div class="seat clickable" seatNum="6" inRoom="1">Seat 6</div>
+               <div class="seat reserved clickable" seatNum="7" inRoom="1">Seat 7</div>
+            </div>
+         </div>
+         <div class="room">
+            <h3>Room 2</h3>
+            <div class="seats">
+               <div class="seat clickable" seatNum="8" inRoom="2">Seat 8</div>
+               <div class="seat clickable" seatNum="9" inRoom="2">Seat 9</div>
+               <div class="seat clickable" seatNum="10" inRoom="2">Seat 10</div>
+               <div class="seat clickable" seatNum="11" inRoom="2">Seat 11</div>
+               <div class="seat clickable" seatNum="12" inRoom="2">Seat 12</div>
+               <div class="seat reserved clickable" seatNum="13" inRoom="2">Seat 13</div>
+               <div class="seat clickable" seatNum="14" inRoom="2">Seat 14</div>
+            </div>
+         </div>
+         <div class="room">
+            <h3>Room 3</h3>
+            <div class="seats">
+               <div class="seat clickable" seatNum="15" inRoom="3">Seat 15</div>
+               <div class="seat clickable" seatNum="16" inRoom="3">Seat 16</div>
+               <div class="seat clickable" seatNum="17" inRoom="3">Seat 17</div>
+               <div class="seat clickable" seatNum="18" inRoom="3">Seat 18</div>
+               <div class="seat reserved clickable" seatNum="19" inRoom="3">Seat 19</div>
+               <div class="seat clickable" seatNum="20" inRoom="3">Seat 20</div>
+               <div class="seat clickable" seatNum="21" inRoom="3">Seat 21</div>
+            </div>
+         </div>
+      </main>
+      <footer class="booking__footer">
+         <div class="invoice">
+            <span class="invoice__title">
+               <h3>Selection</h3>
+            </span>
+            <div class="invoice__selected">
+               <div class="selected__seats"></div>
+               <div class="invoice__price">Total: <span>0 EGP</span></div>
+               <a href="checkout.html" class="checkout-button clickable">Next</a>
+            </div>
+         </div>
+      </footer>
+>>>>>>> 2380477 (All files)
    </body>
 </html>

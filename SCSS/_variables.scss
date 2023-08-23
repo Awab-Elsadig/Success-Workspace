@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
    // ############# Colors ###############
    // White #####
    --color-white: #fff;
@@ -36,4 +37,62 @@
    --transition-medium: 600ms;
    --transition-slow: 800ms;
    --transition-vslow: 1s;
+=======
+   // ##### Colors ########
+   --clr-booking: #658be3;
+   --clr-booking-light: #b1c3ec;
+   --clr-booking-dark: #5b7fd4;
+
+   --clr-membership: #0bed9e;
+   --clr-membership-light: #6adeb6;
+   --clr-membership-dark: #009a64;
+
+   --clr-weekly: #19c6e9;
+   --clr-weekly-light: #7fcede;
+   --clr-weekly-dark: #0882a1;
+
+   --clr-monthly: #b313f3;
+   --clr-monthly-light: #b365d2;
+   --clr-monthly-dark: #7400a1;
+
+   --clr-checkout: #e6417b;
+   --clr-checkout-form: #6a38bb;
+   --clr-checkout-back: #f574a1;
+
+   --clr-contact: #0a8d8d;
+   --clr-contact-light: #56baba;
+   --clr-contact-dark: #095454;
+
+   // White
+   --clr-white: #fff;
+   --clr-white-e: #eee;
+   --clr-white-d: #ddd;
+   --clr-white-c: #ccc;
+   --clr-white-b: #bbb;
+   --clr-white-a: #aaa;
+
+   // Black
+   --clr-black: #000;
+   --clr-black-1: #111;
+   --clr-black-2: #222;
+   --clr-black-3: #333;
+   --clr-black-4: #444;
+   --clr-black-5: #555;
+   --clr-black-op9: #0009;
+   --clr-black-op8: #0008;
+   --clr-black-op7: #0007;
+   --clr-black-op6: #0006;
+   --clr-black-op5: #0005;
+   --clr-black-op4: #0004;
+   --clr-black-op3: #0003;
+   --clr-black-op2: #0002;
+   --clr-black-op1: #0001;
+
+   // ##### Transitions ########
+   --transition-vslow: 1s;
+   --transition-slow: 0.8s;
+   --transition-normal: 0.6s;
+   --transition-fast: 0.4s;
+   --transition-vfast: 0.2s;
+>>>>>>> 2380477 (All files)
 }

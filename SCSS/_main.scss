@@ -1,0 +1,43 @@
+@forward "variables";
+
+.main--page {
+   background-image: url(../Assets/Backgrounds/BG-1.jpeg);
+   background-size: cover;
+}
+
+.main__main {
+   height: 70dvh;
+   @media (max-height: 767px) and (orientation: landscape) {
+      height: 70dvw;
+   }
+}
+
+.logo {
+   margin-top: 10rem;
+
+   font-family: Great Vibes;
+   font-size: 10rem;
+
+   @media (max-height: 767px) and (orientation: landscape) {
+      margin-top: 5rem;
+      font-size: 7rem;
+   }
+}
+
+.booking-button,
+.membership-button,
+.contact-button {
+   background-image: url(../Assets/Backgrounds/BG-1.jpeg);
+   background-size: cover;
+
+   margin-bottom: 2rem;
+
+   border: solid 0.2rem var(--clr-black);
+
+   @media (max-height: 767px) and (orientation: landscape) {
+   }
+}
+
+.contact-button {
+   margin: 0;
+}

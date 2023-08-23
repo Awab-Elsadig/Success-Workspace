@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use "./mixins";
 @use "./variables";
 
@@ -264,4 +265,168 @@
    50% {
       transform: translateY(30%);
    }
+=======
+.booking--page {
+   background-image: url(../Assets/Backgrounds/multi-color.jpg);
+   background-size: cover;
+}
+
+.booking__back {
+   background-color: var(--clr-booking-dark);
+   color: var(--clr-white);
+}
+
+.booking__main {
+   justify-content: flex-start;
+   direction: ltr;
+
+   height: 70dvh;
+
+   overflow-y: auto;
+   scrollbar-gutter: stable both-edges;
+}
+
+// ######## Rooms #########
+.room {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   width: min(70vw, 50rem);
+
+   margin-bottom: 2rem;
+   padding: 1rem;
+
+   background-image: url(../Assets/Backgrounds/BG-2.jpeg);
+   background-size: cover;
+
+   border-radius: 1rem;
+   box-shadow: inset 0 0 0.8rem var(--clr-black-op9);
+   direction: ltr;
+   text-align: center;
+   cursor: pointer;
+
+   h3 {
+      display: flex;
+      align-items: center;
+
+      height: calc(7rem - 2rem);
+
+      font-size: 2.5rem;
+      font-weight: 600;
+   }
+}
+
+.seats {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 1rem;
+
+   width: 100%;
+   max-height: 0;
+
+   overflow: hidden;
+   transition: max-height var(--transition-fast);
+}
+
+.seat {
+   display: grid;
+   place-items: center;
+
+   height: 5rem;
+
+   font-size: 2rem;
+   font-weight: 500;
+
+   background-color: lightblue;
+   color: var(--clr-black-1);
+
+   box-shadow: inset 0 0 0.2rem 0.15rem var(--clr-black-op5);
+   border-radius: 0.5rem;
+
+   transition: color var(--transition-vfast), background-color var(--transition-fast);
+}
+
+.booked {
+   background-color: dodgerblue;
+   color: var(--clr-white);
+}
+
+.reserved {
+   background-color: darkblue;
+   color: white;
+}
+
+// ######## Invoice #########
+
+.booking__footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding: 2rem;
+}
+
+.invoice {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   width: min(70vw, 50rem);
+
+   padding: 1rem;
+
+   background-color: var(--clr-white-e);
+
+   border: solid 0.3rem var(--clr-black-4);
+   cursor: pointer;
+   text-align: center;
+   direction: ltr;
+   z-index: 1;
+}
+
+.invoice__title {
+   font-size: 2.5rem;
+   font-weight: 600;
+   width: 70%;
+}
+
+.invoice__selected {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+
+   width: 100%;
+   max-height: 0;
+
+   font-size: 1.7rem;
+   font-weight: 500;
+
+   transition: max-height var(--transition-fast), padding var(--transition-fast);
+   overflow: hidden;
+}
+
+.invoice__price,
+.checkout-button {
+   width: 80%;
+
+   margin-top: 1rem;
+   padding-block: 0.5rem;
+
+   font-size: 2.5rem;
+   font-weight: 500;
+}
+
+.invoice__price {
+   background-color: var(--clr-black-5);
+   color: var(--clr-white);
+}
+
+.checkout-button {
+   display: none;
+   background-color: dodgerblue;
+   color: var(--clr-white);
+>>>>>>> 2380477 (All files)
 }

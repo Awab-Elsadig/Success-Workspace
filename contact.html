@@ -3,6 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
       <link rel="icon" type="image/x-icon" href="./Assets/Page_Icons/contact.png" />
       <title>Contact</title>
       
@@ -48,5 +49,49 @@
          </div>
       </div>
 
+=======
+      <title>Contact Us</title>
+      <link rel="shortcut icon" href="Assets/Page_Icons/contact.ico" type="image/x-icon" />
+
+      <!-- CSS Stylesheet -->
+      <link rel="stylesheet" href="./dist/styles.css" />
+      <!-- FontAwesome Stylesheet -->
+      <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- JavaScript File -->
+      <script src="JS/contact.js" defer></script>
+      <!-- BodyMovin Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   </head>
+   <body class="contact--page">
+      <header class="contact__header">
+         <a href="index.html" class="button contact__back back-button clickable">العودة<i class="fas fa-arrow-left"></i></a>
+      </header>
+      <main class="contact__main">
+         <form action="" id="form" class="contact__form">
+            <label>
+               <h3>Name</h3>
+               <input type="text" name="name" placeholder="eg. Ahmed Mohamed" />
+            </label>
+            <label>
+               <h3>Phone</h3>
+               <input type="text" name="phone" placeholder="eg. 01234567890" />
+            </label>
+            <label>
+               <h3>Message</h3>
+               <textarea name="message" id="message" placeholder="eg. Your message here"></textarea>
+            </label>
+            <button type="submit" class="clickable">Submit</button>
+         </form>
+      </main>
+      <div class="overlay"></div>
+      <div class="popup">
+         <div class="mark"></div>
+         <div class="title">
+            <h3 class="title__main"></h3>
+            <h4 class="title__message"></h4>
+         </div>
+         <button type="button" class="close--button clickable">Close</button>
+      </div>
+>>>>>>> 2380477 (All files)
    </body>
 </html>
