@@ -1,3 +1,6 @@
+const telegramBotApiToken = "5883112226:AAEEPlvFXlxFmevftpWLm0FxVB07YwOUrAo";
+const chatId = "1518879748";
+const telegramUrl = `https://api.telegram.org/bot${telegramBotApiToken}/sendMessage`;
 const form = document.getElementById("form");
 
 form.addEventListener("submit", async (e) => {
@@ -6,7 +9,6 @@ form.addEventListener("submit", async (e) => {
    const formData = new FormData(form);
    const name = formData.get("name");
    const phone = formData.get("phone");
-   const message = formData.get("message");
 
    const text = createTelegramMessage(name, phone);
 
@@ -56,17 +58,19 @@ function showPopup(isValid) {
    const path = isValid ? "../Assets/Animations/check.json" : "../Assets/Animations/error.json";
    const shadowColor = isValid ? "limegreen" : "coral";
    titleMain.textContent = isValid ? "Done!" : "Error!";
-   titleMessage.textContent = isValid ? "Booking Sent" : "Message Not Sent";
+   titleMessage.textContent = isValid ? "Message Sent" : "Message Not Sent";
    popup.style.boxShadow = `0.8rem 0.8rem 0 ${shadowColor}`;
 
    loadAnimation(path);
    overlay.addEventListener("click", closePopup);
-   document.querySelector(".close--button").addEventListener("click", closePopup);
+   popup.querySelector(".close--button").addEventListener("click", closePopup);
 }
 
 function loadAnimation(path) {
+   const mark = document.querySelector(".mark");
+   mark.style.display = "flex";
    bodymovin.loadAnimation({
-      container: document.querySelector(".mark"),
+      container: mark,
       path: path,
       render: "svg",
       loop: false,
@@ -78,9 +82,11 @@ function loadAnimation(path) {
 function closePopup() {
    const overlay = document.querySelector(".overlay");
    const popup = document.querySelector(".popup");
+   const infoPopup = document.querySelector(".info--popup");
    const mark = document.querySelector(".mark");
 
    overlay.classList.remove("open");
    popup.classList.remove("open");
+   infoPopup.classList.remove("open");
    mark.textContent = "";
 }
