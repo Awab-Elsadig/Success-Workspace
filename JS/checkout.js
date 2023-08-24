@@ -29,6 +29,7 @@ form.addEventListener("submit", async (e) => {
    }
 
    form.reset();
+   showMap();
 });
 
 async function sendTelegram(text) {
@@ -171,4 +172,9 @@ function displayInfoPopup() {
    titleMessage.textContent = "الرجاء قراءة التعليمات جيداً";
 
    popup.querySelector(".close--button").addEventListener("click", closePopup);
+}
+
+function showMap() {
+   let map = document.querySelector(".map-link");
+   map.style.display = "flex";
 }
