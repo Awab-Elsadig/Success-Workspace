@@ -75,9 +75,7 @@ hr {
 
 .popup__seats {
    width: 70%;
-   max-height: 10rem;
 
-   overflow-y: auto;
    .bookedSeat {
       display: grid;
       grid-template-columns: 1fr 1fr;

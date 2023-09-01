@@ -61,7 +61,9 @@ function toggleSeat(seat) {
 
       let bookedSeats = JSON.parse(sessionStorage.getItem("bookedSeats"));
       if (bookedSeats.length === 4) {
-         console.log("This is Max!");
+         seat.classList.toggle("booked");
+         updateSelection();
+
          setTimeout(() => {
             document.querySelector(".maxed-out").style.opacity = 1;
             document.querySelector(".maxed-out").style.animation = "left-right linear 0.4s 0.3s";
@@ -98,7 +100,6 @@ function updateSelection() {
    sessionStorage.setItem("bookingPrice", `${bookedSeats.length * SEAT_PRICE} EGP`);
 
    // Update Price and Show Checkout Button
-   console.log(document.querySelector(".invoice"));
    document.querySelector(".invoice__price span").textContent = `${bookedSeats.length * SEAT_PRICE} EGP`;
    if (bookedSeats.length > 0) {
       document.querySelector(".checkout-button").style.display = "block";
