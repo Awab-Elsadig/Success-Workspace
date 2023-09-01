@@ -10,6 +10,8 @@
       <link rel="stylesheet" href="./dist/styles.css" />
       <!-- FontAwesome Stylesheet -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- Shared JavaScrip File -->
+      <script src="JS/shared.js" defer></script>
       <!-- JavaScript File -->
       <script src="JS/checkout.js" defer></script>
       <!-- BodyMovin Script -->
@@ -17,7 +19,12 @@
    </head>
    <body class="checkout--page">
       <header class="checkout__header">
-         <a href="booking.html" class="button checkout__back back-button">العودة<i class="fas fa-arrow-left"></i></a>
+         <div class="shared--top">
+            <a href="booking.html" class="button checkout__back back--button">العودة<i class="fas fa-arrow-left"></i></a>
+            <button class="info--button checkout__info--button">
+               <i class="fa-solid fa-question"></i>
+            </button>
+         </div>
       </header>
       <main class="weekly__main">
          <form action="" id="form" class="checkout__form">
@@ -67,5 +74,15 @@
       <a href="https://goo.gl/maps/3J3A7dLiDs9uo6hdA" target="_blank" class="map-link">
          <i class="fa-solid fa-map-location-dot"></i>
       </a>
+      <div class="info--popup">
+         <h3 class="info__title">التعليمات</h3>
+         <hr class="info__hr" />
+         <h4 class="info__subtitle">تعليمات الحجز :</h4>
+         <ol class="info__list">
+            <li>الجد الأقصى للفرد 3 كراسي</li>
+            <li>سيتم ارسال رسالة لتاكيد الحجز</li>
+            <li>الحجز سيلغى خلال ساعة مت التأكيد في حال عدم الحضور</li>
+         </ol>
+      </div>
    </body>
 </html>

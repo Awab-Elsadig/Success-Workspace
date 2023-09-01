@@ -58,6 +58,20 @@ function toggleSeat(seat) {
    if (!seat.classList.contains("reserved")) {
       seat.classList.toggle("booked");
       updateSelection();
+
+      let bookedSeats = JSON.parse(sessionStorage.getItem("bookedSeats"));
+      if (bookedSeats.length === 4) {
+         console.log("This is Max!");
+         setTimeout(() => {
+            document.querySelector(".maxed-out").style.opacity = 1;
+            document.querySelector(".maxed-out").style.animation = "left-right linear 0.4s 0.3s";
+         }, 200);
+         setTimeout(() => {
+            document.querySelector(".maxed-out").style.opacity = 0;
+            document.querySelector(".maxed-out").style.animation = "none";
+         }, 2500);
+      }
+
       document.querySelector(".invoice__selected").style.maxHeight = 0;
    }
 }

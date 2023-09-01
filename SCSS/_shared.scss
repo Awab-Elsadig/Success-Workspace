@@ -18,7 +18,8 @@
    box-shadow: inset 0 0 0.4rem var(--clr-black-4);
 }
 
-.back-button {
+.back--button {
+   width: initial;
    text-shadow: 0.2rem 0.2rem 0 var(--clr-black-3);
 }
 
@@ -147,4 +148,109 @@ form {
 .title__message {
    font-size: 2rem;
    font-weight: 500;
+}
+
+// Info Button
+.info--button {
+   display: grid;
+   place-items: center;
+
+   font-size: 3rem;
+
+   box-shadow: inset 0 0 0.4rem var(--clr-black-4);
+
+   background-size: cover;
+   color: var(--clr-black);
+
+   border-radius: 1rem;
+   cursor: pointer;
+}
+
+.shared--bottom {
+   display: grid;
+   grid-template-columns: 1fr 7rem;
+   gap: 1rem;
+
+   width: min(70vw, 50rem);
+}
+
+.shared--top {
+   display: grid;
+   grid-template-columns: 3fr 7rem;
+   gap: 1rem;
+
+   width: min(70vw, 50rem);
+
+   .info--button {
+      text-shadow: 0.2rem 0.2rem 0 var(--clr-black-3);
+   }
+}
+
+// Info Popup
+.info--popup {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+
+   width: min(70vw, 50rem);
+
+   padding: 2rem 2rem;
+
+   background-color: beige;
+
+   border-radius: 1rem;
+   pointer-events: none;
+   scale: 0;
+   transition: scale var(--transition-fast);
+
+   &.open {
+      scale: 1;
+   }
+}
+
+.info__title {
+   align-self: center;
+
+   font-size: 3rem;
+   font-weight: 700;
+}
+
+.info__hr {
+   align-self: center;
+
+   width: 100%;
+}
+
+.info__subtitle {
+   margin-block: 1rem;
+
+   font-size: 2.5rem;
+   font-weight: 600;
+}
+
+.info__list {
+   margin-bottom: 2rem;
+   
+   font-size: 1.5rem;
+   font-weight: 500;
+
+   li {
+      list-style: decimal inside;
+   }
+
+   &.booking--list {
+      color: red;
+   }
+   &.main--list {
+      color: blue;
+   }
+   &.data--list {
+      color: forestgreen;
+   }
 }

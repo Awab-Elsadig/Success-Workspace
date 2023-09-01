@@ -15,7 +15,12 @@
    </head>
    <body class="booking--page">
       <header class="booking__header">
-         <a href="index.html" class="button booking__back back-button clickable">العودة<i class="fas fa-arrow-left"></i></a>
+         <div class="shared--top">
+            <a href="index.html" class="button booking__back back--button clickable">العودة<i class="fas fa-arrow-left"></i></a>
+            <button class="info--button booking__info--button">
+               <i class="fa-solid fa-question"></i>
+            </button>
+         </div>
       </header>
       <main class="booking__main">
          <div class="room">
@@ -53,6 +58,10 @@
                <div class="seat clickable" seatNum="20" inRoom="3">Seat 20</div>
                <div class="seat clickable" seatNum="21" inRoom="3">Seat 21</div>
             </div>
+         </div>
+         <div class="maxed-out">
+            3 <br />
+            كراسي فقط
          </div>
       </main>
       <footer class="booking__footer">

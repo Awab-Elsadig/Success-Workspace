@@ -4,8 +4,23 @@
 }
 
 .booking__back {
-   background-color: var(--clr-booking-dark);
-   color: var(--clr-white);
+   background-image: url(../Assets/Backgrounds/BG-2.jpeg);
+   background-size: 400%;
+   background-position: bottom;
+   color: var(--clr-black);
+
+   font-weight: 500;
+
+   text-shadow: none;
+}
+
+.booking__info--button {
+   background-image: url(../Assets/Backgrounds/BG-2.jpeg);
+   background-size: 800%;
+   background-position: bottom;
+   color: var(--clr-black);
+
+   text-shadow: none !important;
 }
 
 .booking__main {
@@ -86,8 +101,41 @@
 }
 
 .reserved {
-   background-color: darkblue;
+   background-color: rgb(61, 85, 110);
    color: white;
+}
+
+.maxed-out {
+   position: absolute;
+   top: 80%;
+   left: 50%;
+   translate: -50% -50%;
+
+   display: grid;
+   place-items: center;
+
+   width: min(70vw, 50rem);
+   height: 7rem;
+
+   background-color: #dc4e4e;
+   backdrop-filter: blur(5px);
+   color: var(--clr-white);
+
+   font-size: 2rem;
+   font-weight: 600;
+   text-align: center;
+
+   border-radius: 1rem;
+   border: solid 0.2rem var(--clr-black);
+   box-shadow: inset 0 0 0.4rem var(--clr-black-4);
+   direction: rtl;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity var(--transition-fast);
+
+   span {
+      font-size: 3rem;
+   }
 }
 
 // ######## Invoice #########
@@ -160,4 +208,20 @@
    display: none;
    background-color: dodgerblue;
    color: var(--clr-white);
+}
+
+@keyframes left-right {
+   0%,
+   100% {
+      translate: -50% -50%;
+   }
+   25% {
+      translate: -45% -50%;
+   }
+   50% {
+      translate: -55% -50%;
+   }
+   75% {
+      translate: -45% -50%;
+   }
 }
