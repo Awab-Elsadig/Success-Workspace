@@ -10,6 +10,8 @@
       <link rel="stylesheet" href="./dist/styles.css" />
       <!-- FontAwesome Stylesheet -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- Shared JavaScrip File -->
+      <script src="JS/shared.js" defer></script>
       <!-- JavaScript File -->
       <script src="JS/monthly.js" defer></script>
       <!-- BodyMovin Script -->
@@ -19,7 +21,7 @@
       <header class="monthly__header">
          <div class="shared--top">
             <a href="membership.html" class="button monthly__back back--button clickable">العودة<i class="fas fa-arrow-left"></i></a>
-            <button class="info--button monthly__info--button">
+            <button class="info--button monthly__info--button clickable">
                <i class="fa-solid fa-question"></i>
             </button>
          </div>
@@ -46,5 +48,6 @@
          </div>
          <button type="button" class="close--button clickable">Close</button>
       </div>
+      <div class="info--popup"></div>
    </body>
 </html>

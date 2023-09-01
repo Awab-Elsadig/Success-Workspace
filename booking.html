@@ -10,6 +10,8 @@
       <link rel="stylesheet" href="./dist/styles.css" />
       <!-- FontAwesome Stylesheet -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- Shared JavaScrip File -->
+      <script src="JS/shared.js" defer></script>
       <!-- JavaScript File -->
       <script src="JS/booking.js" defer></script>
    </head>
@@ -17,7 +19,7 @@
       <header class="booking__header">
          <div class="shared--top">
             <a href="index.html" class="button booking__back back--button clickable">العودة<i class="fas fa-arrow-left"></i></a>
-            <button class="info--button booking__info--button">
+            <button class="info--button booking__info--button clickable">
                <i class="fa-solid fa-question"></i>
             </button>
          </div>
@@ -75,6 +77,8 @@
                <a href="checkout.html" class="checkout-button clickable">Next</a>
             </div>
          </div>
+         <div class="overlay"></div>
+         <div class="info--popup"></div>
       </footer>
    </body>
 </html>

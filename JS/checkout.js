@@ -6,18 +6,9 @@ const bookedSeats = JSON.parse(sessionStorage.getItem("bookedSeats"));
 function displayInfoPopup() {
    const overlay = document.querySelector(".overlay");
    const popup = document.querySelector(".info--popup");
-   const titleMain = popup.querySelector(".title__main");
-   const titleMessage = popup.querySelector(".title__message");
-   const mark = document.querySelector(".mark");
 
    overlay.classList.add("open");
    popup.classList.add("open");
-   mark.style.display = "none";
-
-   titleMain.textContent = "تعليمات";
-   titleMessage.textContent = "الرجاء قراءة التعليمات جيداً";
-
-   popup.querySelector(".close--button").addEventListener("click", closePopup);
 }
 
 function displayBookedSeats() {

@@ -10,12 +10,14 @@
       <link rel="stylesheet" href="./dist/styles.css" />
       <!-- FontAwesome Stylesheet -->
       <link rel="stylesheet" href="./CSS/all.min.css" />
+      <!-- Shared JavaScrip File -->
+      <script src="JS/shared.js" defer></script>
    </head>
    <body class="membership--page">
       <header class="membership__header">
          <div class="shared--top">
             <a href="index.html" class="button membership__back back--button clickable">العودة<i class="fas fa-arrow-left"></i></a>
-            <button class="info--button membership__info--button">
+            <button class="info--button membership__info--button clickable">
                <i class="fa-solid fa-question"></i>
             </button>
          </div>
@@ -36,5 +38,7 @@
             <i class="fas fa-calendar-alt monthly-icon"></i>
          </a>
       </main>
+      <div class="overlay"></div>
+      <div class="info--popup"></div>
    </body>
 </html>

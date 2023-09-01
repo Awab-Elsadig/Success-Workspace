@@ -18,7 +18,6 @@ infoPopup.innerHTML = `
 <h4 class="info__subtitle data--subtitle">تعليمات البيانات :</h4>
 <ol class="info__list data--list">
    <li>يرجى إدخال بيانات صحيحة لأنه سيتم التواصل معكم من خلالها.</li>
-   <li>إحترام المكان والهدوء.</li>
 </ol>
 `;
 
