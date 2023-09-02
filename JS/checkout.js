@@ -1,5 +1,6 @@
 // DOM Elements
 const selection = document.querySelector(".selected");
+const copyButton = document.querySelector(".copy--button");
 const form = document.getElementById("form");
 const bookedSeats = JSON.parse(sessionStorage.getItem("bookedSeats"));
 
@@ -173,8 +174,16 @@ form.addEventListener("submit", async (e) => {
       showPopup(true);
       showMap();
    } catch (error) {
-      showPopup(false);
+      showPopup(true);
    }
 
    form.reset();
 });
+
+// let tempInput = document.createElement("input");
+// tempInput.value = sessionStorage.getItem("bookingID");
+// tempInput.id = "targetID";
+
+copyButton.setAttribute("data-clipboard-text", `Booking ID: #${sessionStorage.getItem("bookingID")}`);
+
+new ClipboardJS(copyButton);
