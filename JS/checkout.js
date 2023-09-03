@@ -176,6 +176,8 @@ form.addEventListener("submit", async (e) => {
    } catch (error) {
       showPopup(true);
    }
+   copyButton.setAttribute("data-clipboard-text", `Booking ID: #${sessionStorage.getItem("bookingID")}`);
+   new ClipboardJS(copyButton);
 
    form.reset();
 });
@@ -183,7 +185,3 @@ form.addEventListener("submit", async (e) => {
 // let tempInput = document.createElement("input");
 // tempInput.value = sessionStorage.getItem("bookingID");
 // tempInput.id = "targetID";
-
-copyButton.setAttribute("data-clipboard-text", `Booking ID: #${sessionStorage.getItem("bookingID")}`);
-
-new ClipboardJS(copyButton);

@@ -9,6 +9,7 @@ infoPopup.innerHTML = `
    <li>الحد الأقصى للفرد 3 كراسي.</li>
    <li>سيتم إرسال رسالة لتأكيد الحجز.</li>
    <li>الحجز سيلغى خلال ساعة من التأكيد في حال عدم الحضور.</li>
+   <li>ممنوع الحجز بنفس البيانات مرتين.</li>
 </ol>
 <h4 class="info__subtitle main--subtitle">تعليمات عامة :</h4>
 <ol class="info__list main--list">
