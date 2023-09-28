@@ -165,23 +165,22 @@ form.addEventListener("submit", async (e) => {
    const phone = formData.get("phone");
 
    const bookingID = generateBookingID();
+   sessionStorage.setItem("name", name);
+   sessionStorage.setItem("phone", phone);
    sessionStorage.setItem("bookingID", bookingID);
 
    const text = createTelegramMessage(name, phone);
 
    try {
       await sendTelegram(text);
-      showPopup(true);
-      showMap();
+      // showPopup(true);
+
+      window.location.href = "successful.html";
    } catch (error) {
-      showPopup(true);
+      showPopup(false);
    }
    copyButton.setAttribute("data-clipboard-text", `Booking ID: #${sessionStorage.getItem("bookingID")}`);
    new ClipboardJS(copyButton);
 
    form.reset();
 });
-
-// let tempInput = document.createElement("input");
-// tempInput.value = sessionStorage.getItem("bookingID");
-// tempInput.id = "targetID";

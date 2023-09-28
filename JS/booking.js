@@ -1,4 +1,5 @@
 let SEAT_PRICE = 30;
+sessionStorage.setItem("seatPrice", SEAT_PRICE);
 let rooms = document.querySelectorAll(".room");
 let seats = document.querySelectorAll(".seat");
 
@@ -27,7 +28,6 @@ function initSeats() {
    });
 }
 // RETURN ^^^^^^^^^^^^^^^^^^^^^^^
-
 function initInvoice() {
    let invoice = document.querySelector(".invoice");
    let selection = document.querySelector(".invoice__selected");

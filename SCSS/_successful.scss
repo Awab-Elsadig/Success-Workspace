@@ -21,18 +21,18 @@
    font-size: 2.5rem;
    font-weight: 600;
 
-   background-color: #d9d9d9;
+   background-color: #b6b6b6;
 
    border-radius: 1rem;
    box-shadow: inset 0 0 0.4rem var(--clr-black-4);
 }
 
 .home__info--button {
-   background-color: #d9d9d9;
+   background-color: #b6b6b6;
 }
 
 .mark {
-   height: 20rem;
+   height: 15rem;
 }
 
 .title__done {
@@ -48,12 +48,15 @@
 }
 
 .done--information {
-   background-color: var(--clr-white);
-
+   background-color: #ffffff94;
+   
    width: 100%;
 
    padding: 1rem;
    margin: 2rem;
+
+   border-radius: 1rem;
+   border: solid 0.1rem var(--clr-black);
 }
 
 .done__part {
@@ -74,4 +77,23 @@
 
    font-size: 2rem;
    font-weight: 500;
+}
+
+.done__price {
+   font-size: 3rem;
+   font-weight: 600;
+
+   direction: ltr;
+   text-align: right;
+}
+
+.map-link {
+   padding: 1rem;
+
+   background-color: var(--clr-black-3);
+   color: var(--clr-white-e);
+
+   font-size: 4rem;
+
+   border-radius: 1rem;
 }
